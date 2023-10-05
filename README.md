@@ -8,7 +8,7 @@
 
 ### Description
 
-This repository has materials for a hands-on Introduction to R workshop for biologists, showing some basics, and also some powerful things R can do *(things that would be more difficult to do with Excel)*. The aim is to give beginners the confidence to continue learning R, so the focus here is on tidyverse and visualisation of biological data, as we believe this is a productive and engaging way to start learning R. 
+This repository has materials for a hands-on Introduction to R workshop for biologists, showing some basics, and also some powerful things R can do *(things that would be more difficult to do with Excel)*. The aim is to give beginners the confidence to continue learning R, so the focus here is on data wrangling and visualisation of biological data, as we believe this is a productive and engaging way to start learning R. 
 
 ### Installation Requirements
 
