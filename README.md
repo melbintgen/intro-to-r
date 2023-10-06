@@ -1,5 +1,5 @@
 # Introduction to R
-**Authors: Maria Doyle, Jessica Chung, Vicky Perreau, Kim-Anh Le Cao**
+**Authors: Maria Doyle, Jessica Chung, Vicky Perreau, Kim-Anh L&#234; Cao**
 
 | Audiance      | Prerequisites | Duration    |
 | ------------- | ------------- | ----------- |
