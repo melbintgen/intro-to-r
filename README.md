@@ -1,5 +1,5 @@
 # Introduction to R
-**Authors: Kim-Anh Le Cao, Saritha Kodikara**
+**Authors: Maria Doyle, Jessica Chung, Vicky Perreau, Kim-Anh Le Cao**
 
 | Audiance      | Prerequisites | Duration    |
 | ------------- | ------------- | ----------- |
