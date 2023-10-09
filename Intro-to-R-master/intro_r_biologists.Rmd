@@ -397,11 +397,11 @@ When assigning a value to an object, R does not print the value. We do
 not see what is in `counts` or `sampleinfo`. But there are ways we can
 look at the data.
 
-**Your turn 3.4:** Option 1: Click on the `counts` object in your global
+**Your turn 4.1:** Option 1: Click on the `counts` object in your global
 environment panel on the right-hand-side of RStudio. It will open a new
 Tab.
 
-**Your turn 3.5:** Option 2: type the name of the object and this will
+**Your turn 4.2:** Option 2: type the name of the object and this will
 print the first few lines and some information, such as number of rows.
 
 ```{r}
@@ -431,7 +431,7 @@ tail(sampleinfo)
 It is very useful to check that what you have read in R corresponds to
 the number of lines and columns of the data;
 
-**Your turn 3.6:** Check how many rows and columns are in `sampleinfo`.
+**Your turn 4.3:** Check how many rows and columns are in `sampleinfo`.
 
 ```{r, eval = FALSE}
 dim(sampleinfo)
@@ -444,7 +444,7 @@ the number of rows and columns in the objects we have in our session.
 
 ## Column and row names of the data
 
-**Your turn 3.7:** Check the column and row names used in in
+**Your turn 4.4:** Check the column and row names used in in
 `sampleinfo`. Comment on the results you get.
 
 ```{r, eval = FALSE}
@@ -488,7 +488,7 @@ element in the matrix:
 sampleinfo[1,2]
 ```
 
-**Your turn 3.8:** Work out what the following commands mean, then
+**Your turn 4.5:** Work out what the following commands mean, then
 include those to subset `sampleinfo` (either on the rows or the
 columns):
 
@@ -515,7 +515,7 @@ default, read_csv function assigned a name of "\...1" to it. We can
 change this column to something more descriptive by combining what what
 we have learnt.
 
-**Your turn 3.9:** Describe what the next command line is doing:
+**Your turn 4.6:** Describe what the next command line is doing:
 
 ```{r, eval = TRUE, show = FALSE}
 colnames(sampleinfo)[1] <- "sample_id"
@@ -523,7 +523,7 @@ colnames(sampleinfo)[1] <- "sample_id"
 sampleinfo
 ```
 
-**Your turn 3.10:** Do the same to rename the first column name from
+**Your turn 4.7:** Do the same to rename the first column name from
 "\...1" to "gene_id" in `counts`.
 
 <button onclick="myFunction(&#39;q1&#39;)">
