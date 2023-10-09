@@ -1,0 +1,989 @@
+"This file contain descriptions for each gene"  
+
+gene_1	hypothetical protein FLJ22624
+gene_2	heparan sulfate proteoglycan 2 (perlecan)
+gene_3	agrin
+gene_4	Huntingtin-interacting protein A
+gene_5	glycoprotein A33 (transmembrane)
+gene_6	calpain 6
+gene_7	SRY (sex determining region Y)-box 4
+gene_8	zinc finger protein 217
+gene_9	**latexin protein
+gene_10	glucosamine (N-acetyl)-6-sulfatase (Sanfilippo disease IIID)
+gene_12	fibronectin 1
+gene_13	BTG family, member 2
+gene_14	**hypothetical protein FLJ23356
+gene_15	branched chain keto acid dehydrogenase E1, alpha polypeptide (maple syrup urine disease)
+gene_16	Homo sapiens, clone IMAGE:4183312, mRNA, partial cds
+gene_17	matrix metalloproteinase 9 (gelatinase B, 92kD gelatinase, 92kD type IV collagenase)
+gene_18	N-myc downstream regulated
+gene_19	cyclin-dependent kinase 7 (homolog of Xenopus MO15 cdk-activating kinase)
+gene_20	exportin, tRNA (nuclear export receptor for tRNAs)
+gene_21	caspase 1, apoptosis-related cysteine protease (interleukin 1, beta, convertase)
+gene_22	leucine zipper, putative tumor suppressor 1
+gene_23	CD53 antigen
+gene_24	inositol polyphosphate-1-phosphatase
+gene_25	casein kinase 2, alpha 1 polypeptide
+gene_26	ESTs
+gene_27	SPARC-like 1 (mast9, hevin)
+gene_28	phosphoinositide-3-kinase, catalytic, gamma polypeptide
+gene_29	phorbolin (similar to apolipoprotein B mRNA editing protein)
+gene_30	nuclear factor I/A
+gene_31	transmembrane 4 superfamily member 1
+gene_32	Rho GDP dissociation inhibitor (GDI) beta
+gene_33	trefoil factor 3 (intestinal)
+gene_34	RNA helicase-related protein
+gene_35	aquaporin 1 (channel-forming integral protein, 28kD)
+gene_36	transcobalamin I (vitamin B12 binding protein, R binder family)
+gene_37	Homo sapiens, clone IMAGE:4183312, mRNA, partial cds
+gene_38	similar to rat HREV107
+gene_39	bHLH protein DEC2
+gene_40	syndecan 2 (heparan sulfate proteoglycan 1, cell surface-associated, fibroglycan)
+gene_41	Homo sapiens mRNA; cDNA DKFZp586J2118 (from clone DKFZp586J2118)
+gene_42	ESTs, Weakly similar to ALU1_HUMAN ALU SUBFAMILY J SEQUENCE CONTAMINATION WARNING ENTRY [H.sapiens]
+gene_43	replication factor C (activator 1) 4 (37kD)
+gene_44	filamin B, beta (actin-binding protein-278)
+gene_45	transmembrane 4 superfamily member 3
+gene_46	GM2 ganglioside activator protein
+gene_47	KIAA0074 protein
+gene_49	Fc fragment of IgG binding protein
+gene_50	ESTs
+gene_51	Homo sapiens clone 24421 mRNA sequence
+gene_52	connective tissue growth factor
+gene_53	Ser-Thr protein kinase related to the myotonic dystrophy protein kinase
+gene_54	chromogranin B (secretogranin 1)
+gene_55	autocrine motility factor receptor
+gene_56	cyclin D2
+gene_57	putative cellular retinol-binding protein CRBP III
+gene_58	echinoderm microtubule-associated protein-like
+gene_59	hypothetical protein HT036
+gene_60	a disintegrin and metalloproteinase domain 15 (metargidin)
+gene_61	trichorhinophalangeal syndrome I
+gene_62	matrix metalloproteinase 19
+gene_63	microtubule-associated protein 7
+gene_64	hypothetical protein FLJ11106
+gene_65	**collagen, type V, alpha 2
+gene_66	discoidin domain receptor family, member 2
+gene_67	**Homo sapiens cDNA: FLJ23037 fis, clone LNG02036, highly similar to HSU68019 Homo sapiens mad protein homolog (hMAD-3) mRNA
+gene_68	myosin VA (heavy polypeptide 12, myoxin)
+gene_69	ESTs, Highly similar to T50835 hypothetical protein [H.sapiens]
+gene_70	phorbol-12-myristate-13-acetate-induced protein 1
+gene_71	**MAD (mothers against decapentaplegic, Drosophila) homolog 5
+gene_72	antigen identified by monoclonal antibody Ki-67
+gene_73	paraoxonase 3
+gene_74	GK003 protein
+gene_75	ADP-ribosylation factor-like 7
+gene_76	hemopoietic cell kinase
+gene_77	LPAP for lysophosphatidic acid phosphatase
+gene_79	paternally expressed 10
+gene_80	S100 calcium-binding protein A11 (calgizzarin)
+gene_81	ESTs
+gene_82	citrate synthase
+gene_83	regulator of G-protein signalling 16
+gene_84	transforming growth factor beta-stimulated protein TSC-22
+gene_85	microtubule-associated protein, RP/EB family, member 2
+gene_86	adrenergic, beta-2-, receptor, surface
+gene_88	calpain 3, (p94)
+gene_89	signal transducer and activator of transcription 1, 91kD
+gene_90	annexin A8
+gene_91	fibroblast growth factor receptor 1 (fms-related tyrosine kinase 2, Pfeiffer syndrome)
+gene_92	bone marrow stromal cell antigen 2
+gene_93	fatty acid binding protein 3, muscle and heart (mammary-derived growth inhibitor)
+gene_94	vascular cell adhesion molecule 1
+gene_95	Gardner-Rasheed feline sarcoma viral (v-fgr) oncogene homolog
+gene_96	forkhead box O1A (rhabdomyosarcoma)
+gene_97	small inducible cytokine subfamily A (Cys-Cys), member 13
+gene_98	Homo sapiens mRNA; cDNA DKFZp762M127 (from clone DKFZp762M127)
+gene_99	bullous pemphigoid antigen 1 (230/240kD)
+gene_100	glutathione S-transferase M5
+gene_101	CDP-diacylglycerol synthase (phosphatidate cytidylyltransferase) 1
+gene_102	CED-6 protein
+gene_103	wingless-type MMTV integration site family, member 5A
+gene_104	actin, gamma 2, smooth muscle, enteric
+gene_105	eukaryotic translation elongation factor 1 alpha 1
+gene_106	hypothetical protein from clone 643
+gene_107	proteolipid protein 1 (Pelizaeus-Merzbacher disease, spastic paraplegia 2, uncomplicated)
+gene_108	epoxide hydrolase 2, cytoplasmic
+gene_109	Homo sapiens cDNA: FLJ21592 fis, clone COL07036
+gene_110	aldehyde dehydrogenase 3 family, member B1
+gene_111	formyl peptide receptor 1
+gene_112	Putative prostate cancer tumor suppressor
+gene_113	glycine amidinotransferase (L-arginine:glycine amidinotransferase)
+gene_114	secretogranin II (chromogranin C)
+gene_115	serum amyloid A1
+gene_116	hypothetical protein
+gene_117	collagen, type IV, alpha 1
+gene_118	monoamine oxidase A
+gene_119	keratin 4
+gene_120	**mitochondrial ribosomal protein S14
+gene_121	solute carrier family 5 (inositol transporters), member 3
+gene_122	cytochrome P450 isoform 4F12
+gene_123	proliferating cell nuclear antigen
+gene_124	ESTs, Weakly similar to S21348 probable pol polyprotein-related protein 4 - rat [R.norvegicus]
+gene_125	regulator of G-protein signalling 5
+gene_126	six transmembrane epithelial antigen of the prostate
+gene_127	cadherin 2, type 1, N-cadherin (neuronal)
+gene_128	complement component 1, r subcomponent
+gene_129	ESTs
+gene_130	Homo sapiens cDNA FLJ13603 fis, clone PLACE1010270
+gene_131	ESTs
+gene_133	biphenyl hydrolase-like (serine hydrolase; breast epithelial mucin-associated antigen)
+gene_134	hypothetical protein PRO1489
+gene_135	solute carrier family 11 (proton-coupled divalent metal ion transporters), member 3
+gene_136	nuclear receptor subfamily 1, group H, member 3
+gene_137	**ras homolog gene family, member B
+gene_138	uracil-DNA glycosylase
+gene_139	putative integral membrane transporter
+gene_140	osteomodulin
+gene_141	sterol O-acyltransferase (acyl-Coenzyme A: cholesterol acyltransferase) 1
+gene_142	mitogen inducible 2
+gene_143	myeloid/lymphoid or mixed-lineage leukemia (trithorax (Drosophila) homolog); translocated to, 4
+gene_144	claudin 7
+gene_145	mesothelin
+gene_146	FOS-like antigen-1
+gene_147	glutathione S-transferase theta 1
+gene_148	paternally expressed 10
+gene_149	hypothetical protein FLJ10210
+gene_150	Lutheran blood group (Auberger b antigen included)
+gene_151	CD14 antigen
+gene_152	T cell receptor delta locus
+gene_153	Duffy blood group
+gene_154	transmembrane 4 superfamily member 2
+gene_155	tyrosine 3-monooxygenase/tryptophan 5-monooxygenase activation protein, zeta polypeptide
+gene_156	heterogeneous nuclear ribonucleoprotein H1 (H)
+gene_157	hypothetical protein PP1226
+gene_158	biglycan
+gene_159	**glutathione-S-transferase like; glutathione transferase omega
+gene_160	endothelin receptor type A
+gene_161	**hypothetical protein FLJ23356
+gene_162	**tumor necrosis factor receptor superfamily, member 1B
+gene_163	caveolin 1, caveolae protein, 22kD
+gene_164	hypothetical protein FLJ10956
+gene_165	p53-induced protein
+gene_166	fibrinogen, B beta polypeptide
+gene_167	hypothetical protein MGC4675
+gene_168	cytidine monophosphate-N-acetylneuraminic acid hydroxylase (CMP-N-acetylneuraminate monooxygenase)
+gene_169	PRO2000 protein
+gene_170	complement component 2
+gene_171	ladinin 1
+gene_172	plasminogen activator, urokinase receptor
+gene_173	KIAA0161 gene product
+gene_174	ATPase, H+ transporting, lysosomal (vacuolar proton pump), member J
+gene_175	ATP-binding cassette, sub-family C (CFTR/MRP), member 3
+gene_176	cellular retinoic acid-binding protein 2
+gene_177	histone acetyltransferase
+gene_178	cellular retinoic acid-binding protein 1
+gene_179	contactin associated protein 1
+gene_180	ribosomal protein S6
+gene_181	monokine induced by gamma interferon
+gene_182	**KIAA1538 protein
+gene_183	Homo sapiens cDNA FLJ14059 fis, clone HEMBB1000573
+gene_184	ectodermal-neural cortex (with BTB-like domain)
+gene_185	major histocompatibility complex, class II, DN alpha
+gene_186	solute carrier family 2 (facilitated glucose transporter), member 3
+gene_187	cadherin 3, type 1, P-cadherin (placental)
+gene_188	CEGP1 protein
+gene_189	Homo sapiens mRNA from chromosome 5q31-33 region
+gene_190	ESTs
+gene_191	transporter 1, ATP-binding cassette, sub-family B (MDR/TAP)
+gene_192	amyloid beta precursor protein (cytoplasmic tail)-binding protein 2
+gene_193	glucan (1,4-alpha-), branching enzyme 1 (glycogen branching enzyme, Andersen disease, glycogen storage disease type IV)
+gene_194	activated p21cdc42Hs kinase
+gene_195	neurogranin (protein kinase C substrate, RC3)
+gene_196	Homo sapiens mRNA; cDNA DKFZp434N2412 (from clone DKFZp434N2412)
+gene_197	fatty acid synthase
+gene_198	fatty acid binding protein 4, adipocyte
+gene_199	folate receptor 2 (fetal)
+gene_200	Human glucose transporter pseudogene
+gene_201	Human mRNA for SB classII histocompatibility antigen alpha-chain
+gene_202	neuroblastoma (nerve tissue) protein
+gene_203	laminin, gamma 1 (formerly LAMB2)
+gene_204	ESTs, Weakly similar to Z195_HUMAN ZINC FINGER PROTEIN 195 [H.sapiens]
+gene_205	complement component 5
+gene_206	carboxypeptidase N, polypeptide 1, 50kD
+gene_207	intercellular adhesion molecule 2
+gene_208	fibrillin 1 (Marfan syndrome)
+gene_209	valyl-tRNA synthetase 2
+gene_210	cytochrome P450, subfamily IVB, polypeptide 1
+gene_211	catenin (cadherin-associated protein), alpha-like 1
+gene_212	collagen, type VI, alpha 1
+gene_213	myosin IXA
+gene_214	ESTs, Weakly similar to ribosomal protein S6 kinase 3 [H.sapiens]
+gene_215	mucin 1, transmembrane
+gene_216	hypothetical protein FLJ22390
+gene_217	minichromosome maintenance deficient (S. cerevisiae) 4
+gene_218	guanine nucleotide binding protein (G protein), alpha inhibiting activity polypeptide 1
+gene_219	plastin 1 (I isoform)
+gene_220	kinesin-like 5 (mitotic kinesin-like protein 1)
+gene_221	retinol-binding protein 4, plasma
+gene_222	ribosomal protein L5
+gene_223	ras inhibitor
+gene_224	proliferating cell nuclear antigen
+gene_225	intercellular adhesion molecule 5, telencephalin
+gene_226	ras-related C3 botulinum toxin substrate 1 (rho family, small GTP binding protein Rac1)
+gene_227	platelet-derived growth factor receptor, beta polypeptide
+gene_228	caveolin 2
+gene_229	plexin B1
+gene_230	hepsin (transmembrane protease, serine 1)
+gene_231	keratin 7
+gene_232	ESTs, Weakly similar to ALU1_HUMAN ALU SUBFAMILY J SEQUENCE CONTAMINATION WARNING ENTRY [H.sapiens]
+gene_233	threonyl-tRNA synthetase
+gene_234	myosin IE
+gene_235	trichorhinophalangeal syndrome I
+gene_236	CD59 antigen p18-20 (antigen identified by monoclonal antibodies 16.3A5, EJ16, EJ30, EL32 and G344)
+gene_237	**cation-chloride cotransporter-interacting protein
+gene_238	sialyltransferase
+gene_239	ATP-binding cassette, sub-family C (CFTR/MRP), member 2
+gene_240	hypothetical protein
+gene_241	collagen, type I, alpha 2
+gene_242	general transcription factor IIH, polypeptide 3 (34kD subunit)
+gene_243	**Homo sapiens cDNA FLJ14445 fis, clone HEMBB1001294, highly similar to GTP-BINDING PROTEIN TC10
+gene_244	serine (or cysteine) proteinase inhibitor, clade G (C1 inhibitor), member 1
+gene_245	carcinoembryonic antigen-related cell adhesion molecule 5
+gene_246	**Homo sapiens mRNA; cDNA DKFZp434I0812 (from clone DKFZp434I0812); partial cds
+gene_247	macrophage stimulating 1 receptor (c-met-related tyrosine kinase)
+gene_248	chromosome 2 open reading frame 2
+gene_249	ras homolog gene family, member H
+gene_250	hypothetical protein FLJ00026
+gene_251	cell division cycle 4-like
+gene_252	S100 calcium-binding protein A8 (calgranulin A)
+gene_253	A kinase (PRKA) anchor protein (gravin) 12
+gene_254	ectonucleotide pyrophosphatase/phosphodiesterase 5 (putative function)
+gene_255	hypothetical protein MGC5350
+gene_256	microsomal glutathione S-transferase 1
+gene_257	growth factor receptor-bound protein 10
+gene_258	cell division cycle 25C
+gene_259	macrophage stimulating 1 (hepatocyte growth factor-like)
+gene_260	Rho guanine nucleotide exchange factor (GEF) 5
+gene_261	**myosin VI
+gene_262	grancalcin, EF-hand calcium-binding protein
+gene_263	thymopoietin
+gene_264	**serine/threonine kinase 15
+gene_265	secreted protein, acidic, cysteine-rich (osteonectin)
+gene_266	quinoid dihydropteridine reductase
+gene_267	Homo sapiens, clone MGC:20120 IMAGE:3677070, mRNA, complete cds
+gene_268	chloride channel, nucleotide-sensitive, 1A
+gene_269	tight junction protein 2 (zona occludens 2)
+gene_270	phospholipase C, epsilon
+gene_271	murine leukemia viral (bmi-1) oncogene homolog
+gene_272	fibroblast growth factor 7 (keratinocyte growth factor)
+gene_273	Novel human gene mapping to chomosome 13
+gene_274	**ATP-binding cassette, sub-family C (CFTR/MRP), member 1
+gene_275	integral membrane protein 3
+gene_276	hypothetical protein FLJ10948
+gene_277	ESTs, Highly similar to S94541 1 clone 4-3 [H.sapiens]
+gene_278	mitogen-activated protein kinase 13
+gene_279	**chitinase 3-like 2
+gene_280	eukaryotic translation elongation factor 1 epsilon 1
+gene_281	malic enzyme 1, NADP(+)-dependent, cytosolic
+gene_282	neuropilin 2
+gene_283	KIAA0130 gene product
+gene_284	divalent cation tolerant protein CUTA
+gene_285	natural killer cell transcript 4
+gene_286	Homo sapiens mRNA full length insert cDNA clone EUROIMAGE 746039
+gene_287	ESTs
+gene_288	**coatomer protein complex, subunit beta 2 (beta prime)
+gene_289	interferon stimulated gene (20kD)
+gene_290	microfibrillar-associated protein 2
+gene_291	caldesmon 1
+gene_292	membrane-spanning 4-domains, subfamily A, member 4A
+gene_293	allograft inflammatory factor 1
+gene_294	v-myc avian myelocytomatosis viral related oncogene, neuroblastoma derived
+gene_295	chromosome segregation 1 (yeast homolog)-like
+gene_296	ESTs
+gene_297	melan-A
+gene_298	AE-binding protein 1
+gene_299	transforming growth factor, beta 3
+gene_300	islet cell autoantigen 1 (69kD)
+gene_301	FK506-binding protein 1A (12kD)
+gene_302	lunatic fringe (Drosophila) homolog
+gene_303	jagged 1 (Alagille syndrome)
+gene_304	fucosyltransferase 4 (alpha (1,3) fucosyltransferase, myeloid-specific)
+gene_305	pituitary tumor-transforming 1
+gene_306	growth associated protein 43
+gene_307	hypothetical protein FLJ20605
+gene_308	leukocyte immunoglobulin-like receptor, subfamily A (with TM domain), member 2
+gene_309	Kallmann syndrome 1 sequence
+gene_310	keratin 18
+gene_311	CDC7 (cell division cycle 7, S. cerevisiae, homolog)-like 1
+gene_312	granzyme K (serine protease, granzyme 3; tryptase II)
+gene_313	ectonucleoside triphosphate diphosphohydrolase 1
+gene_314	ESTs
+gene_315	bone morphogenetic protein 1
+gene_316	synaptic vesicle protein 2B homolog
+gene_317	myosin, heavy polypeptide 9, non-muscle
+gene_318	hexokinase 1
+gene_319	platelet-derived growth factor beta polypeptide (simian sarcoma viral (v-sis) oncogene homolog)
+gene_320	protein kinase H11; small stress protein-like protein HSP22
+gene_321	hyaluronan-mediated motility receptor (RHAMM)
+gene_322	tumor necrosis factor (ligand) superfamily, member 10
+gene_323	Rho GTPase activating protein 4
+gene_324	neuronal cell adhesion molecule
+gene_325	collagen, type XVIII, alpha 1
+gene_326	**B-cell CLL/lymphoma 6, member B (zinc finger protein)
+gene_327	acyl-Coenzyme A dehydrogenase, short/branched chain
+gene_328	Opa-interacting protein 2
+gene_329	myosin VI
+gene_330	inhibin, beta A (activin A, activin AB alpha polypeptide)
+gene_331	baculoviral IAP repeat-containing 5 (survivin)
+gene_332	thrombomodulin
+gene_333	protein tyrosine phosphatase, receptor type, M
+gene_334	ESTs, Weakly similar to ALUB_HUMAN !!!! ALU CLASS B WARNING ENTRY !!! [H.sapiens]
+gene_335	inositol 1,4,5-triphosphate receptor, type 2
+gene_336	v-myc avian myelocytomatosis viral oncogene homolog 1, lung carcinoma derived
+gene_337	hypothetical protein
+gene_338	protein tyrosine phosphatase, receptor type, E
+gene_339	integrin, alpha L (antigen CD11A (p180), lymphocyte function-associated antigen 1; alpha polypeptide)
+gene_340	glycoprotein (transmembrane) nmb
+gene_341	dermatopontin
+gene_342	protocadherin gamma subfamily C, 3
+gene_343	karyopherin alpha 2 (RAG cohort 1, importin alpha 1)
+gene_344	inositol polyphosphate-5-phosphatase, 145kD
+gene_346	major histocompatibility complex, class II, DM alpha
+gene_347	capping protein (actin filament), gelsolin-like
+gene_348	fibroblast growth factor receptor 1 (fms-related tyrosine kinase 2, Pfeiffer syndrome)
+gene_349	inositol polyphosphate-4-phosphatase, type II, 105kD
+gene_350	mitogen-activated protein kinase 6
+gene_351	major histocompatibility complex, class II, DQ alpha 1
+gene_352	retinoic acid receptor, beta
+gene_353	interleukin 10 receptor, alpha
+gene_354	mesoderm specific transcript (mouse) homolog
+gene_355	DEAD/H (Asp-Glu-Ala-Asp/His) box polypeptide, Y chromosome
+gene_356	interferon induced transmembrane protein 1 (9-27)
+gene_357	lysyl oxidase
+gene_358	carcinoembryonic antigen-related cell adhesion molecule 1 (biliary glycoprotein)
+gene_359	ESTs
+gene_360	sushi-repeat-containing protein, X chromosome
+gene_361	Microfibril-associated glycoprotein-2
+gene_362	ESTs
+gene_363	procollagen-lysine, 2-oxoglutarate 5-dioxygenase (lysine hydroxylase, Ehlers-Danlos syndrome type VI)
+gene_364	neuronal Shc adaptor homolog
+gene_365	nucleophosmin (nucleolar phosphoprotein B23, numatrin)
+gene_366	plasminogen activator, urokinase receptor
+gene_367	hypothetical protein FLJ21062
+gene_368	nudix (nucleoside diphosphate linked moiety X)-type motif 1
+gene_369	ESTs, Moderately similar to PNL2_HUMAN PEANUT-LIKE PROTEIN 2 [H.sapiens]
+gene_370	cadherin 13, H-cadherin (heart)
+gene_371	phosphoinositide-3-kinase, regulatory subunit, polypeptide 1 (p85 alpha)
+gene_372	ESTs
+gene_373	tryptophan 2,3-dioxygenase
+gene_374	Rho GTPase activating protein 8
+gene_375	GDNF family receptor alpha 1
+gene_376	signal transducer and activator of transcription 1, 91kD
+gene_377	fibrinogen, gamma polypeptide
+gene_378	secreted frizzled-related protein 1
+gene_379	lysyl oxidase
+gene_380	erythrocyte membrane protein band 7.2 (stomatin)
+gene_381	step II splicing factor SLU7
+gene_382	GATA-binding protein 3
+gene_383	hypothetical protein dJ1181N3.1
+gene_384	Homo sapiens mRNA; cDNA DKFZp564C2063 (from clone DKFZp564C2063)
+gene_385	nuclear factor I/B
+gene_386	high-mobility group (nonhistone chromosomal) protein 2
+gene_387	integrin, beta 8
+gene_388	fatty acid binding protein 7, brain
+gene_389	ESTs
+gene_390	putative G protein-coupled receptor
+gene_391	**eukaryotic translation initiation factor 4A, isoform 1
+gene_392	Homo sapiens cDNA: FLJ23538 fis, clone LNG08010, highly similar to BETA2 Human MEN1 region clone epsilon/beta mRNA
+gene_393	major histocompatibility complex, class II, DR beta 3
+gene_394	CD3G antigen, gamma polypeptide (TiT3 complex)
+gene_395	transglutaminase 2 (C polypeptide, protein-glutamine-gamma-glutamyltransferase)
+gene_396	ornithine decarboxylase 1
+gene_397	tissue specific transplantation antigen P35B
+gene_398	cadherin 13, H-cadherin (heart)
+gene_399	jun B proto-oncogene
+gene_400	collagen, type III, alpha 1 (Ehlers-Danlos syndrome type IV, autosomal dominant)
+gene_401	protein tyrosine phosphatase, receptor type, E
+gene_402	fatty acid amide hydrolase
+gene_403	**Human DNA sequence from clone RP4-595C2 on chromosome 1q24.1-25.3 Contains ESTs, STSs and GSSs. Contains the 3' part of the gene for two isoforms of the KIAA0351 protein and the gene for angiopoieti
+gene_404	chondroitin sulfate proteoglycan 4 (melanoma-associated)
+gene_405	transmembrane, prostate androgen induced RNA
+gene_407	sparc/osteonectin, cwcv and kazal-like domains proteoglycan (testican)
+gene_408	amyloid beta (A4) precursor-like protein 2
+gene_409	hypothetical protein FLJ23189
+gene_410	homeo box B6
+gene_411	CD5 antigen (p56-62)
+gene_412	desmoglein 2
+gene_413	insulin-like growth factor 1 (somatomedin C)
+gene_414	actin, alpha 2, smooth muscle, aorta
+gene_415	inhibitor of DNA binding 3, dominant negative helix-loop-helix protein
+gene_416	HTPAP protein
+gene_417	interleukin 2 receptor, gamma (severe combined immunodeficiency)
+gene_418	vav 3 oncogene
+gene_419	ESTs, Weakly similar to IRX2_HUMAN IROQUOIS-CLASS HOMEODOMAIN PROTEIN IRX-2 [H.sapiens]
+gene_420	early development regulator 2 (homolog of polyhomeotic 2)
+gene_421	vasoactive intestinal peptide receptor 1
+gene_422	EST, Moderately similar to Cd-7 Metallothionein-2 [H.sapiens]
+gene_423	CD3D antigen, delta polypeptide (TiT3 complex)
+gene_424	**polymyositis/scleroderma autoantigen 1 (75kD)
+gene_425	**DEAD/H (Asp-Glu-Ala-Asp/His) box polypeptide 11 (S.cerevisiae CHL1-like helicase)
+gene_426	CD1C antigen, c polypeptide
+gene_427	calcium channel, voltage-dependent, beta 3 subunit
+gene_428	ribosomal protein S6
+gene_429	Fc fragment of IgE, high affinity I, receptor for; gamma polypeptide
+gene_430	SWAP-70 protein
+gene_431	steroidogenic acute regulatory protein related
+gene_433	interleukin 15 receptor, alpha
+gene_434	adaptor-related protein complex 2, beta 1 subunit
+gene_435	carboxylesterase 1 (monocyte/macrophage serine esterase 1)
+gene_436	KIAA0914 gene product
+gene_437	collagen, type IV, alpha 2
+gene_438	ESTs
+gene_439	hypothetical protein, expressed in osteoblast
+gene_440	**interferon-induced protein 75, 52kD
+gene_441	selectin E (endothelial adhesion molecule 1)
+gene_442	integrin, alpha 3 (antigen CD49C, alpha 3 subunit of VLA-3 receptor)
+gene_443	Fc fragment of IgG, receptor, transporter, alpha
+gene_444	special AT-rich sequence binding protein 1 (binds to nuclear matrix/scaffold-associating DNA's)
+gene_445	CD53 antigen
+gene_446	KIAA0022 gene product
+gene_447	ribonuclease, RNase A family, 1 (pancreatic)
+gene_448	**Human clone 23614 mRNA sequence
+gene_449	prostaglandin-endoperoxide synthase 2 (prostaglandin G/H synthase and cyclooxygenase)
+gene_450	cell division cycle 25B
+gene_451	imprinted in Prader-Willi syndrome
+gene_452	nel (chicken)-like 2
+gene_453	matrix metalloproteinase 16 (membrane-inserted)
+gene_454	complement component 7
+gene_455	calponin 1, basic, smooth muscle
+gene_456	Wiskott-Aldrich syndrome protein interacting protein
+gene_457	KIAA0182 protein
+gene_458	troponin I, skeletal, fast
+gene_459	interferon-induced protein with tetratricopeptide repeats 1
+gene_460	homeobox protein from AL590526
+gene_461	coagulation factor II (thrombin) receptor
+gene_462	hypothetical protein FLJ20116
+gene_463	coagulation factor XIII, A1 polypeptide
+gene_464	GATA-binding protein 3
+gene_465	vitamin D (1,25- dihydroxyvitamin D3) receptor
+gene_466	Lysosomal-associated multispanning membrane protein-5
+gene_467	Ral guanine nucleotide exchange factor RalGPS1A
+gene_468	hypothetical gene BC008967
+gene_469	RAD51 (S. cerevisiae) homolog C
+gene_470	cadherin 11, type 2, OB-cadherin (osteoblast)
+gene_471	cytochrome P450, subfamily XXVIIA (steroid 27-hydroxylase, cerebrotendinous xanthomatosis), polypeptide 1
+gene_472	hematopoietic cell-specific Lyn substrate 1
+gene_473	LIV-1 protein, estrogen regulated
+gene_474	S-adenosylmethionine decarboxylase 1
+gene_475	EGL nine (C.elegans) homolog 3
+gene_476	dystrobrevin, alpha
+gene_477	GABA(A) receptor-associated protein like 1
+gene_478	low density lipoprotein receptor (familial hypercholesterolemia)
+gene_479	Homo sapiens mRNA; cDNA DKFZp761M0111 (from clone DKFZp761M0111)
+gene_480	integrin, beta 2 (antigen CD18 (p95), lymphocyte function-associated antigen 1; macrophage antigen 1 (mac-1) beta subunit)
+gene_481	ribosomal protein S6
+gene_482	Homo sapiens mRNA; cDNA DKFZp586J2118 (from clone DKFZp586J2118)
+gene_483	glycerol-3-phosphate dehydrogenase 1 (soluble)
+gene_484	insulin receptor substrate 1
+gene_485	hemoglobin, zeta
+gene_486	silver (mouse homolog) like
+gene_487	**H.sapiens DMA, DMB, HLA-Z1, IPP2, LMP2, TAP1, LMP7, TAP2, DOB, DQB2 and RING8, 9, 13 and 14 genes
+gene_488	integrin, beta 4
+gene_489	hypothetical protein MGC14376
+gene_490	vimentin
+gene_491	hypothetical protein FLJ22021
+gene_492	cysteine dioxygenase, type I
+gene_493	transforming growth factor, beta-induced, 68kD
+gene_494	keratin 5 (epidermolysis bullosa simplex, Dowling-Meara/Kobner/Weber-Cockayne types)
+gene_495	glycerol-3-phosphate dehydrogenase 1 (soluble)
+gene_496	synovial sarcoma, X breakpoint 4
+gene_497	neutrophil cytosolic factor 1 (47kD, chronic granulomatous disease, autosomal 1)
+gene_498	potassium voltage-gated channel, KQT-like subfamily, member 2
+gene_499	acetyl-Coenzyme A acyltransferase 2 (mitochondrial 3-oxoacyl-Coenzyme A thiolase)
+gene_500	aminolevulinate, delta-, synthase 1
+gene_501	acyl-Coenzyme A oxidase 2, branched chain
+gene_502	RNA binding motif protein 8A
+gene_503	aldo-keto reductase family 1, member C1 (dihydrodiol dehydrogenase 1; 20-alpha (3-alpha)-hydroxysteroid dehydrogenase)
+gene_504	inter-alpha (globulin) inhibitor, H2 polypeptide
+gene_505	laminin, beta 1
+gene_506	transforming growth factor, beta 2
+gene_507	peroxisome proliferative activated receptor, gamma, coactivator 1
+gene_508	frizzled (Drosophila) homolog 8
+gene_509	Homo sapiens cDNA: FLJ23371 fis, clone HEP16068, highly similar to HSTFIISH Homo sapiens mRNA for transcription elongation factor TFIIS
+gene_510	ecotropic viral integration site 2B
+gene_511	coronin, actin-binding protein, 1C
+gene_512	L1 cell adhesion molecule (hydrocephalus, stenosis of aqueduct of Sylvius 1, MASA (mental retardation, aphasia, shuffling gait and adducted thumbs) syndrome, spastic paraplegia 1)
+gene_513	glutamic-oxaloacetic transaminase 1, soluble (aspartate aminotransferase 1)
+gene_514	ESTs
+gene_515	hypothetical protein FLJ20481
+gene_516	serine protease inhibitor, Kunitz type, 2
+gene_517	secreted frizzled-related protein 1
+gene_518	small proline-rich protein 2C
+gene_519	hypothetical protein DKFZp761F2014
+gene_520	ESTs
+gene_521	carbonic anhydrase XI
+gene_522	hypothetical protein DKFZp564K0322
+gene_523	E2F transcription factor 3
+gene_524	Homo sapiens mRNA; cDNA DKFZp586J2118 (from clone DKFZp586J2118)
+gene_525	integrin, beta 1 (fibronectin receptor, beta polypeptide, antigen CD29 includes MDF2, MSK12)
+gene_526	sialyltransferase 8 (alpha-N-acetylneuraminate: alpha-2,8-sialytransferase, GD3 synthase) A
+gene_527	cathepsin O
+gene_528	tissue inhibitor of metalloproteinase 3 (Sorsby fundus dystrophy, pseudoinflammatory)
+gene_529	hypothetical protein FLJ23591
+gene_530	laminin, gamma 2 (nicein (100kD), kalinin (105kD), BM600 (100kD), Herlitz junctional epidermolysis bullosa))
+gene_531	gamma-glutamyl hydrolase (conjugase, folylpolygammaglutamyl hydrolase)
+gene_532	KIAA0281 gene product
+gene_533	quinone oxidoreductase homolog
+gene_534	membrane-associated tyrosine- and threonine-specific cdc2-inhibitory kinase
+gene_535	**secreted protein, acidic, cysteine-rich (osteonectin)
+gene_536	nuclear receptor coactivator 3
+gene_537	Human mRNA for unknown product, partial cds
+gene_538	a disintegrin and metalloproteinase domain 9 (meltrin gamma)
+gene_539	membrane cofactor protein (CD46, trophoblast-lymphocyte cross-reactive antigen)
+gene_540	aldehyde dehydrogenase 1 family, member A2
+gene_541	ESTs
+gene_542	RAB18, member RAS oncogene family
+gene_543	protein tyrosine phosphatase, receptor type, C
+gene_544	high-mobility group (nonhistone chromosomal) protein isoforms I and Y
+gene_545	intercellular adhesion molecule 1 (CD54), human rhinovirus receptor
+gene_546	ESTs, Weakly similar to I39375 alpha-2-macroglobulin [H.sapiens]
+gene_547	ESTs
+gene_548	EphA1
+gene_549	dual specificity phosphatase 5
+gene_550	androgen induced protein
+gene_551	gelsolin (amyloidosis, Finnish type)
+gene_552	gap junction protein, beta 2, 26kD (connexin 26)
+gene_553	estrogen receptor 1
+gene_554	calpain 1, (mu/I) large subunit
+gene_555	guanylate binding protein 1, interferon-inducible, 67kD
+gene_556	cyclin A2
+gene_557	**prostate differentiation factor
+gene_558	LBP protein 32
+gene_559	Human DNA sequence from clone RP1-304B14 on chromosome 6. Contains a gene for a novel protein and a part of a gene for a novel protein with two isoforms. Contains ESTs, STSs, GSSs and a CpG island
+gene_560	KIAA1002 protein
+gene_561	Homo sapiens cDNA: FLJ21278 fis, clone COL01832
+gene_562	hypothetical protein AF053356-CDS2
+gene_563	CD9 antigen (p24)
+gene_564	spondin 1, (f-spondin) extracellular matrix protein
+gene_565	cystatin B (stefin B)
+gene_566	KIAA0417 gene product
+gene_567	KIAA0300 protein
+gene_568	collagen, type III, alpha 1 (Ehlers-Danlos syndrome type IV, autosomal dominant)
+gene_569	secreted frizzled-related protein 4
+gene_570	Homo sapiens mRNA; cDNA DKFZp564O2364 (from clone DKFZp564O2364)
+gene_571	chromosome 5 open reading frame 4
+gene_572	cyclin-dependent kinase inhibitor 2C (p18, inhibits CDK4)
+gene_573	integrin, alpha 2 (CD49B, alpha 2 subunit of VLA-2 receptor)
+gene_574	squalene epoxidase
+gene_575	alpha-fetoprotein
+gene_576	glycoprotein A repetitions predominant
+gene_577	calcium channel, voltage-dependent, alpha 2/delta subunit 2
+gene_578	transcription factor 8 (represses interleukin 2 expression)
+gene_579	solute carrier family 7 (cationic amino acid transporter, y+ system), member 5
+gene_580	ectodermal-neural cortex (with BTB-like domain)
+gene_581	B-factor, properdin
+gene_582	GTP-binding protein overexpressed in skeletal muscle
+gene_583	**ESTs, Weakly similar to I38022 hypothetical protein [H.sapiens]
+gene_584	acid sphingomyelinase-like phosphodiesterase
+gene_585	ESTs
+gene_587	small inducible cytokine A4 (homologous to mouse Mip-1b)
+gene_588	trinucleotide repeat containing 3
+gene_589	TEK tyrosine kinase, endothelial (venous malformations, multiple cutaneous and mucosal)
+gene_590	Fc fragment of IgE, high affinity I, receptor for; gamma polypeptide
+gene_591	uncharacterized hypothalamus protein HCDASE
+gene_592	arginine vasopressin receptor 1A
+gene_593	transcription factor 7 (T-cell specific, HMG-box)
+gene_594	KIAA1157 protein
+gene_595	transmembrane 4 superfamily member 1
+gene_596	karyopherin alpha 6 (importin alpha 7)
+gene_597	suppression of tumorigenicity 14 (colon carcinoma, matriptase, epithin)
+gene_598	KIAA1685 protein
+gene_599	cathepsin E
+gene_600	**protein tyrosine phosphatase, non-receptor type 11
+gene_601	interleukin 1 receptor, type I
+gene_602	coagulation factor II (thrombin)
+gene_603	follistatin-like 1
+gene_604	collagen, type VI, alpha 2
+gene_605	phosphatidic acid phosphatase type 2B
+gene_606	pleiotrophin (heparin binding growth factor 8, neurite growth-promoting factor 1)
+gene_607	chitinase 3-like 2
+gene_608	centromere protein F (350/400kD, mitosin)
+gene_609	hypothetical protein FLJ14529
+gene_610	uncoupling protein 2 (mitochondrial, proton carrier)
+gene_611	cell adhesion molecule with homology to L1CAM (close homologue of L1)
+gene_612	butyrophilin, subfamily 3, member A3
+gene_613	RNA cyclase homolog
+gene_614	keratin 8
+gene_615	v-maf musculoaponeurotic fibrosarcoma (avian) oncogene homolog
+gene_616	Homo sapiens PRO1851 mRNA, complete cds
+gene_617	v-kit Hardy-Zuckerman 4 feline sarcoma viral oncogene homolog
+gene_618	tumor-associated calcium signal transducer 1
+gene_619	UDP glycosyltransferase 2 family, polypeptide B4
+gene_620	endothelin converting enzyme 1
+gene_621	transcription factor AP-2 gamma (activating enhancer-binding protein 2 gamma)
+gene_622	solute carrier family 34 (sodium phosphate), member 2
+gene_623	myo-inositol 1-phosphate synthase A1
+gene_624	N-acetyltransferase 1 (arylamine N-acetyltransferase)
+gene_625	proliferation-associated 2G4, 38kD
+gene_626	asporin (LRR class 1)
+gene_627	CD24 antigen (small cell lung carcinoma cluster 4 antigen)
+gene_628	collagen, type V, alpha 1
+gene_629	KIAA0042 gene product
+gene_630	interferon induced transmembrane protein 1 (9-27)
+gene_631	ESTs
+gene_632	complement component 4B
+gene_633	endothelin 1
+gene_634	tumor rejection antigen (gp96) 1
+gene_635	B/K protein
+gene_636	ESTs
+gene_637	KIAA1238 protein
+gene_638	minichromosome maintenance deficient (S. cerevisiae) 5 (cell division cycle 46)
+gene_639	complement component 3a receptor 1
+gene_640	Homo sapiens cDNA: FLJ22425 fis, clone HRC08686
+gene_641	retinoic acid receptor responder (tazarotene induced) 2
+gene_642	ESTs
+gene_643	B-factor, properdin
+gene_644	keratin 5 (epidermolysis bullosa simplex, Dowling-Meara/Kobner/Weber-Cockayne types)
+gene_645	cell division cycle 2-like 1 (PITSLRE proteins)
+gene_646	hypothetical protein AL110115
+gene_647	junction plakoglobin
+gene_648	bactericidal/permeability-increasing protein
+gene_649	activating transcription factor 3
+gene_650	I factor (complement)
+gene_651	hemochromatosis
+gene_652	growth factor receptor-bound protein 7
+gene_653	S100 calcium-binding protein A1
+gene_654	adenosine A2b receptor
+gene_655	lymphocyte cytosolic protein 1 (L-plastin)
+gene_656	polo (Drosophia)-like kinase
+gene_657	discs, large (Drosophila) homolog 5
+gene_658	pleiomorphic adenoma gene-like 1
+gene_659	RAP1, GTPase activating protein 1
+gene_660	budding uninhibited by benzimidazoles 1 (yeast homolog)
+gene_661	mal, T-cell differentiation protein
+gene_662	J domain containing protein 1
+gene_663	sal (Drosophila)-like 2
+gene_664	peroxisome proliferative activated receptor, gamma
+gene_665	Fc fragment of IgG, low affinity IIa, receptor for (CD32)
+gene_666	platelet-derived growth factor receptor, alpha polypeptide
+gene_667	myosin, light polypeptide kinase
+gene_668	hypothetical protein FLJ10980
+gene_669	H2A histone family, member L
+gene_670	CDC20 (cell division cycle 20, S. cerevisiae, homolog)
+gene_671	small nuclear ribonucleoprotein polypeptide B''
+gene_672	basonuclin
+gene_673	integrin, alpha M (complement component receptor 3, alpha; also known as CD11b (p170), macrophage antigen alpha polypeptide)
+gene_674	major histocompatibility complex, class II, DR beta 1
+gene_675	gap junction protein, beta 1, 32kD (connexin 32, Charcot-Marie-Tooth neuropathy, X-linked)
+gene_676	claudin 4
+gene_677	**Homo sapiens cDNA FLJ20042 fis, clone COL00424
+gene_678	crystallin, alpha B
+gene_679	coronin, actin-binding protein, 1A
+gene_680	platelet/endothelial cell adhesion molecule (CD31 antigen)
+gene_681	protein kinase (cAMP-dependent, catalytic) inhibitor beta
+gene_682	polymerase (RNA) III (DNA directed) polypeptide K (12.3 kDa)
+gene_683	chromosome X open reading frame 6
+gene_684	Human endogenous retrovirus envelope region mRNA (PL1)
+gene_685	musculin (activated B-cell factor-1)
+gene_686	KIAA0143 protein
+gene_687	SNARE protein
+gene_688	integrin, alpha 6
+gene_689	intercellular adhesion molecule 3
+gene_690	metallothionein 1H
+gene_691	laminin, alpha 4
+gene_692	interleukin 15
+gene_694	ESTs
+gene_695	collagen, type IV, alpha 1
+gene_696	coactosin-like protein
+gene_697	collagen, type VI, alpha 3
+gene_698	cyclin F
+gene_699	UDP-GlcNAc:betaGal beta-1,3-N-acetylglucosaminyltransferase 5
+gene_700	**colony stimulating factor 2 (granulocyte-macrophage)
+gene_701	MADS box transcription enhancer factor 2, polypeptide C (myocyte enhancer factor 2C)
+gene_702	**melanoma cell adhesion molecule
+gene_703	claudin 4
+gene_704	LPS-induced TNF-alpha factor
+gene_705	transforming growth factor, beta receptor II (70-80kD)
+gene_706	cathepsin D (lysosomal aspartyl protease)
+gene_707	chemokine (C-C motif) receptor 2
+gene_708	purinergic receptor (family A group 5)
+gene_709	dedicator of cyto-kinesis 2
+gene_710	forkhead box O1A (rhabdomyosarcoma)
+gene_711	dual specificity phosphatase 4
+gene_712	major histocompatibility complex, class II, DR beta 5
+gene_713	transcription factor AP-2 alpha (activating enhancer-binding protein 2 alpha)
+gene_714	**ESTs
+gene_715	prostate cancer associated protein 1
+gene_716	integrin, alpha 6
+gene_717	cystatin A (stefin A)
+gene_718	small inducible cytokine A2 (monocyte chemotactic protein 1, homologous to mouse Sig-je)
+gene_719	phospholipase C, beta 2
+gene_720	topoisomerase (DNA) II alpha (170kD)
+gene_721	gamma-aminobutyric acid (GABA) A receptor, epsilon
+gene_722	ESTs
+gene_723	**immunoglobulin lambda locus
+gene_724	doublecortin and CaM kinase-like 1
+gene_725	major histocompatibility complex, class II, DQ beta 1
+gene_726	neuronal pentraxin I
+gene_727	ESTs
+gene_728	**small inducible cytokine subfamily A (Cys-Cys), member 14
+gene_730	amine oxidase, copper containing 3 (vascular adhesion protein 1)
+gene_731	eukaryotic translation initiation factor 1A, Y chromosome
+gene_732	runt-related transcription factor 1 (acute myeloid leukemia 1; aml1 oncogene)
+gene_733	solute carrier family 15 (H+/peptide transporter), member 2
+gene_734	dihydropyrimidinase-like 3
+gene_735	GATA-binding protein 3
+gene_736	microtubule-associated protein 1B
+gene_737	ESTs
+gene_738	E74-like factor 3 (ets domain transcription factor, epithelial-specific )
+gene_739	SEC15 (S. cerevisiae)-like
+gene_740	insulin-like growth factor 2 (somatomedin A)
+gene_741	microtubule-associated protein like echinoderm EMAP
+gene_742	thymidylate synthetase
+gene_743	stearoyl-CoA desaturase (delta-9-desaturase)
+gene_744	PAI-1 mRNA-binding protein
+gene_745	hypothetical protein FLJ22662
+gene_746	manic fringe (Drosophila) homolog
+gene_747	**clusterin (complement lysis inhibitor, SP-40,40, sulfated glycoprotein 2, testosterone-repressed prostate message 2, apolipoprotein J)
+gene_748	disabled (Drosophila) homolog 2 (mitogen-responsive phosphoprotein)
+gene_749	plasminogen activator, tissue
+gene_750	solute carrier family 10 (sodium/bile acid cotransporter family), member 1
+gene_751	endothelial PAS domain protein 1
+gene_752	Snf2-related CBP activator protein
+gene_753	**PI-3-kinase-related kinase SMG-1
+gene_754	6-phosphofructo-2-kinase/fructose-2,6-biphosphatase 3
+gene_755	golgi autoantigen, golgin subfamily a, 3
+gene_756	KIAA1488 protein
+gene_757	v-erb-b2 avian erythroblastic leukemia viral oncogene homolog 3
+gene_758	early growth response 2 (Krox-20 (Drosophila) homolog)
+gene_759	putative G protein-coupled receptor
+gene_760	FXYD domain-containing ion transport regulator 1 (phospholemman)
+gene_761	hematopoietic protein 1
+gene_762	KIAA0758 protein
+gene_763	H factor (complement)-like 1
+gene_764	**biliverdin reductase B (flavin reductase (NADPH))
+gene_765	tumor protein p53 (Li-Fraumeni syndrome)
+gene_767	major histocompatibility complex, class I, C
+gene_768	ribonucleotide reductase M1 polypeptide
+gene_769	neuregulin 1
+gene_770	protein tyrosine phosphatase, receptor type, K
+gene_771	collagen, type I, alpha 1
+gene_772	immunoglobulin heavy constant gamma 3 (G3m marker)
+gene_773	moesin
+gene_774	small inducible cytokine subfamily D (Cys-X3-Cys), member 1 (fractalkine, neurotactin)
+gene_775	thyroid hormone receptor-associated protein, 240 kDa subunit
+gene_776	lymphoid nuclear protein related to AF4
+gene_777	ESTs, Weakly similar to T26845 hypothetical protein Y43F4B.7 - Caenorhabditis elegans [C.elegans]
+gene_778	ESTs, Weakly similar to TRHY_HUMAN TRICHOHYALI [H.sapiens]
+gene_779	lectin, galactoside-binding, soluble, 7 (galectin 7)
+gene_780	hexabrachion (tenascin C, cytotactin)
+gene_781	calpain 2, (m/II) large subunit
+gene_782	ESTs, Weakly similar to 1207289A reverse transcriptase related protein [H.sapiens]
+gene_783	integrin, beta 5
+gene_784	slug (chicken homolog), zinc finger protein
+gene_785	fatty acid binding protein 4, adipocyte
+gene_786	glucosidase, alpha; acid (Pompe disease, glycogen storage disease type II)
+gene_787	ESTs
+gene_788	diubiquitin
+gene_789	integrin, beta 3 (platelet glycoprotein IIIa, antigen CD61)
+gene_790	polymerase (DNA directed), epsilon
+gene_791	procollagen-lysine, 2-oxoglutarate 5-dioxygenase (lysine hydroxylase) 2
+gene_792	major histocompatibility complex, class II, DR beta 5
+gene_793	v-erb-b2 avian erythroblastic leukemia viral oncogene homolog 3
+gene_794	LBP protein 32
+gene_795	fragile X mental retardation, autosomal homolog 1
+gene_796	v-yes-1 Yamaguchi sarcoma viral related oncogene homolog
+gene_797	hypothetical protein FLJ11252
+gene_798	CGI-109 protein
+gene_799	hypothetical protein FLJ10337
+gene_800	v-fos FBJ murine osteosarcoma viral oncogene homolog
+gene_801	**milk fat globule-EGF factor 8 protein
+gene_802	protein disulfide isomerase related protein (calcium-binding protein, intestinal-related)
+gene_803	Homo sapiens, Similar to RIKEN cDNA 2010317E24 gene, clone IMAGE:3502019, mRNA, partial cds
+gene_804	retinal short-chain dehydrogenase/reductase retSDR2
+gene_805	MHC class I region ORF
+gene_806	plasminogen
+gene_807	WAP four-disulfide core domain 2
+gene_808	**ubiquitin-protein ligase NEDD4-like
+gene_809	multifunctional polypeptide similar to SAICAR synthetase and AIR carboxylase
+gene_810	fatty acid binding protein 3, muscle and heart (mammary-derived growth inhibitor)
+gene_811	low density lipoprotein-related protein 1 (alpha-2-macroglobulin receptor)
+gene_812	tissue inhibitor of metalloproteinase 3 (Sorsby fundus dystrophy, pseudoinflammatory)
+gene_813	hypothetical protein
+gene_814	tryptophanyl-tRNA synthetase
+gene_815	chondroitin sulfate proteoglycan 2 (versican)
+gene_816	eyes absent (Drosophila) homolog 2
+gene_817	low density lipoprotein-related protein 2
+gene_818	sulfotransferase family, cytosolic, 2B, member 1
+gene_819	guanine nucleotide binding protein (G protein), alpha 15 (Gq class)
+gene_820	stearoyl-CoA desaturase (delta-9-desaturase)
+gene_821	antigen identified by monoclonal antibody MRC OX-2
+gene_822	Human endogenous retrovirus envelope region mRNA (PL1)
+gene_823	elastin (supravalvular aortic stenosis, Williams-Beuren syndrome)
+gene_824	ESTs, Weakly similar to FMOD_HUMAN FIBROMODULIN PRECURSOR [H.sapiens]
+gene_825	UDP-N-acetyl-alpha-D-galactosamine:polypeptide N-acetylgalactosaminyltransferase 3 (GalNAc-T3)
+gene_826	serine protease inhibitor, Kunitz type, 2
+gene_827	vascular cell adhesion molecule 1
+gene_828	carboxypeptidase A4
+gene_829	hypothetical protein
+gene_830	cystatin C (amyloid angiopathy and cerebral hemorrhage)
+gene_831	trinucleotide repeat containing 3
+gene_832	hypothetical protein FLJ12666
+gene_833	myeloid/lymphoid or mixed-lineage leukemia (trithorax (Drosophila) homolog); translocated to, 4
+gene_834	calcium channel, voltage-dependent, L type, alpha 1D subunit
+gene_835	ESTs, Weakly similar to 2004399A chromosomal protein [H.sapiens]
+gene_836	aquaporin 7
+gene_837	collagen, type XVII, alpha 1
+gene_838	vimentin
+gene_839	major histocompatibility complex, class II, DQ beta 1
+gene_840	hypothetical protein FLJ12684
+gene_841	adipose differentiation-related protein
+gene_842	hypothetical protein FLJ14735
+gene_843	fibroblast growth factor receptor 1 (fms-related tyrosine kinase 2, Pfeiffer syndrome)
+gene_844	TONDU
+gene_845	prostate cancer overexpressed gene 1
+gene_846	phosphoserine phosphatase
+gene_847	topoisomerase (DNA) II alpha (170kD)
+gene_848	x 001 protein
+gene_849	DNA segment, single copy probe LNS-CAI/LNS-CAII (deleted in polyposis
+gene_850	thrombospondin 1
+gene_851	beta-2-microglobulin
+gene_852	tumor necrosis factor, alpha-induced protein 6
+gene_853	AD036 protein
+gene_854	hypothetical protein PRO1331
+gene_855	Rac/Cdc42 guanine exchange factor (GEF) 6
+gene_856	hypothetical protein MGC5618
+gene_857	KIAA0290 protein
+gene_858	fatty acid binding protein 1, liver
+gene_859	thrombospondin 1
+gene_860	nonselective sodium potassium/proton exchanger
+gene_861	ESTs
+gene_862	KIAA1391 protein
+gene_863	hypothetical protein
+gene_864	upregulated by 1,25-dihydroxyvitamin D-3
+gene_865	KIAA0442 protein
+gene_866	karyopherin beta 2b, transportin
+gene_867	neuronal pentraxin II
+gene_868	bone morphogenetic protein 7 (osteogenic protein 1)
+gene_869	Meis (mouse) homolog 2
+gene_870	**hypothetical protein 24636
+gene_871	inositol 1,4,5-trisphosphate 3-kinase C
+gene_872	lactotransferrin
+gene_873	nerve growth factor receptor (TNFR superfamily, member 16)
+gene_874	prion protein (p27-30) (Creutzfeld-Jakob disease, Gerstmann-Strausler-Scheinker syndrome, fatal familial insomnia)
+gene_875	runt-related transcription factor 3
+gene_876	matrix Gla protein
+gene_877	protein kinase C, beta 1
+gene_878	nerve growth factor receptor (TNFRSF16) associated protein 1
+gene_879	solute carrier family 26 (sulfate transporter), member 2
+gene_880	transcription factor AP-2 beta (activating enhancer-binding protein 2 beta)
+gene_881	chromosome 18 open reading frame 1
+gene_882	monoamine oxidase B
+gene_883	v-myb avian myeloblastosis viral oncogene homolog
+gene_884	interferon, alpha-inducible protein (clone IFI-6-16)
+gene_885	N-acetyltransferase 1 (arylamine N-acetyltransferase)
+gene_886	cytochrome P450, subfamily IIB (phenobarbital-inducible), polypeptide 6
+gene_887	stanniocalcin 1
+gene_888	fibrinogen-like 1
+gene_889	CD1D antigen, d polypeptide
+gene_890	thyroid hormone receptor interactor 8
+gene_891	hypothetical protein MGC10500
+gene_892	ESTs
+gene_893	downregulated in ovarian cancer 1
+gene_894	nucleosome assembly protein 1-like 3
+gene_895	tyrosinase (oculocutaneous albinism IA)
+gene_896	actin, alpha 2, smooth muscle, aorta
+gene_897	HSPC022 protein
+gene_898	ESTs, Weakly similar to IRX2_HUMAN IROQUOIS-CLASS HOMEODOMAIN PROTEIN IRX-2 [H.sapiens]
+gene_899	ortholog of mouse integral membrane glycoprotein LIG-1
+gene_900	interleukin 1 receptor-like 1
+gene_901	tissue factor pathway inhibitor 2
+gene_903	Homo sapiens clone TCCCTA00151 mRNA sequence
+gene_904	lipoprotein lipase
+gene_905	EphB3
+gene_906	zinc finger protein 217
+gene_907	four and a half LIM domains 1
+gene_908	tachykinin, precursor 1 (substance K, substance P, neurokinin 1, neurokinin 2, neuromedin L, neurokinin alpha, neuropeptide K,neuropeptide gamma)
+gene_909	p8 protein (candidate of metastasis 1)
+gene_910	protein tyrosine phosphatase, non-receptor type 14
+gene_911	ESTs, Highly similar to T46395 hypothetical protein DKFZp434I1120.1 [H.sapiens]
+gene_912	integral membrane protein 2A
+gene_913	latrophilin
+gene_914	ESTs, Weakly similar to CGHU7L collagen alpha 1(III) chain precursor [H.sapiens]
+gene_915	cell division cycle 25B
+gene_916	proteoglycan 1, secretory granule
+gene_917	chemokine (C-X-C motif), receptor 4 (fusin)
+gene_918	von Willebrand factor
+gene_919	N-acetyltransferase, homolog of S. cerevisiae ARD1
+gene_920	secretory leukocyte protease inhibitor (antileukoproteinase)
+gene_921	cyclin-dependent kinase 5, regulatory subunit 1 (p35)
+gene_922	serine (or cysteine) proteinase inhibitor, clade I (neuroserpin), member 1
+gene_923	bromodomain adjacent to zinc finger domain, 2B
+gene_924	amylo-1,6-glucosidase, 4-alpha-glucanotransferase (glycogen debranching enzyme, glycogen storage disease type III)
+gene_925	membrane-spanning 4-domains, subfamily A, member 7
+gene_926	golgin-67
+gene_927	nicotinamide nucleotide transhydrogenase
+gene_928	dihydropyrimidine dehydrogenase
+gene_929	protein C receptor, endothelial (EPCR)
+gene_930	phosphodiesterase 4B, cAMP-specific (dunce (Drosophila)-homolog phosphodiesterase E4)
+gene_931	chromosome 9 open reading frame 5
+gene_932	neuroblastoma, suppression of tumorigenicity 1
+gene_933	adrenergic, alpha-2A-, receptor
+gene_934	membrane protein, palmitoylated 1 (55kD)
+gene_935	apolipoprotein C-II
+gene_936	CD8 antigen, alpha polypeptide (p32)
+gene_937	chaperonin containing TCP1, subunit 5 (epsilon)
+gene_938	macrophage receptor with collagenous structure
+gene_939	**Homo sapiens cDNA FLJ14296 fis, clone PLACE1008455
+gene_940	alanine-glyoxylate aminotransferase (oxalosis I; hyperoxaluria I; glycolicaciduria; serine-pyruvate aminotransferase)
+gene_941	ribonucleotide reductase M2 polypeptide
+gene_942	serine (or cysteine) proteinase inhibitor, clade A (alpha-1 antiproteinase, antitrypsin), member 7
+gene_943	small inducible cytokine subfamily A (Cys-Cys), member 18, pulmonary and activation-regulated
+gene_944	Fc fragment of IgG, low affinity IIb, receptor for (CD32)
+gene_945	ESTs, Weakly similar to T48683 hypothetical protein DKFZp761G0313.1 [H.sapiens]
+gene_946	nucleolar protein 1 (120kD)
+gene_947	lipopolysaccharide-binding protein
+gene_948	wingless-type MMTV integration site family member 2
+gene_949	purinergic receptor (family A group 5)
+gene_950	tumor necrosis factor, alpha-induced protein 2
+gene_951	Homo sapiens clone 24841 mRNA sequence
+gene_952	FK506-binding protein 5
+gene_953	aldehyde dehydrogenase 7 family, member A1
+gene_954	KIAA0303 protein
+gene_955	protein kinase, cAMP-dependent, catalytic, beta
+gene_956	spleen tyrosine kinase
+gene_957	plasminogen activator, urokinase
+gene_958	Homo sapiens, Similar to complement component 1, q subcomponent, c polypeptide, clone MGC:17279 IMAGE:4212772, mRNA, complete cds
+gene_959	**PTK7 protein tyrosine kinase 7
+gene_960	**eukaryotic translation initiation factor 2B, subunit 3 (gamma, 58kD)
+gene_961	forkhead box C1
+gene_962	TYRO protein tyrosine kinase binding protein
+gene_963	centromere protein E (312kD)
+gene_964	ceruloplasmin (ferroxidase)
+gene_965	hypothetical protein FLJ20363
+gene_966	tyrosine kinase with immunoglobulin and epidermal growth factor homology domains
+gene_967	iroquois homeobox protein 5
+gene_968	LIM domain binding 2
+gene_969	DNA segment on chromosome X and Y (unique) 155 expressed sequence
+gene_970	phosphatidic acid phosphatase type 2B
+gene_971	collagen, type III, alpha 1 (Ehlers-Danlos syndrome type IV, autosomal dominant)
+gene_972	integrin, beta 4
+gene_973	testis derived transcript (3 LIM domains)
+gene_974	CD36 antigen (collagen type I receptor, thrombospondin receptor)
+gene_975	fucosidase, alpha-L- 1, tissue
+gene_976	DEAD/H (Asp-Glu-Ala-Asp/His) box polypeptide 11 (S.cerevisiae CHL1-like helicase)
+gene_977	membrane protein, palmitoylated 3 (MAGUK p55 subfamily member 3)
+gene_978	Homo sapiens, Similar to Nedd-4-like ubiquitin-protein ligase, clone MGC:2079 IMAGE:3508225, mRNA, complete cds
+gene_979	activated leucocyte cell adhesion molecule
+gene_980	integrin, alpha L (antigen CD11A (p180), lymphocyte function-associated antigen 1; alpha polypeptide)
+gene_981	platelet-derived growth factor receptor-like
+gene_982	cytochrome P450, subfamily XXIV (vitamin D 24-hydroxylase)
+gene_983	thymosin, beta, identified in neuroblastoma cells
+gene_984	tumor necrosis factor receptor superfamily, member 10b
+gene_985	EST
+gene_986	endothelin receptor type B
+gene_987	Homo sapiens mRNA; cDNA DKFZp434B0425 (from clone DKFZp434B0425)
+gene_988	CD8 antigen, beta polypeptide 1 (p37)
+gene_989	ESTs
+gene_990	ets variant gene 5 (ets-related molecule)
+gene_991	cytochrome P450, subfamily I (dioxin-inducible), polypeptide 1 (glaucoma 3, primary infantile)
+gene_992	**clusterin (complement lysis inhibitor, SP-40,40, sulfated glycoprotein 2, testosterone-repressed prostate message 2, apolipoprotein J)
+gene_993	ephrin-B1
+gene_994	cutaneous T-cell lymphoma tumor antigen se70-2
+gene_995	interleukin 1 receptor, type I
+gene_996	KIAA1238 protein
+gene_997	hypothetical protein FLJ14464
+gene_998	interleukin 1, beta
+gene_999	regulator of G-protein signalling 4
+gene_1000	hypothetical protein FLJ21065
