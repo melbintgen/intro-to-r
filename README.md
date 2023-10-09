@@ -18,10 +18,10 @@ Download the most recent version of R and RStudio using the links below:
 
 ### Lessons
 
-[Click here](https://github.com/melbintgen/intro-to-r/blob/main/intro_r_biologists_with_solutions.html) to access the rendered HTML workshop document.
+[Click here](https://melbintgen.github.io/intro-to-r/intro_r_biologists_with_solutions.html) to access the rendered HTML workshop document.
 
 ### Dataset
-All the data used for the workshop are under the data folder.
+All the data used for the workshop are in [data.zip](https://melbintgen.github.io/intro-to-r/data.zip).
 
 -----
 
