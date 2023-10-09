@@ -25,4 +25,4 @@ All data used for the workshop are in [data.zip](https://melbintgen.github.io/in
 
 -----
 
-- This material was inspired from the workshop from our colleagues from Melbourne Bioinformatics, the University of Melbourne **[r-into-biologists](https://github.com/melbournebioinformatics/r-intro-biologists)**
+- This material was inspired from the workshop **[r-into-biologists](https://github.com/melbournebioinformatics/r-intro-biologists)** from our colleagues from [Melbourne Bioinformatics](https://www.melbournebioinformatics.org.au), University of Melbourne 
