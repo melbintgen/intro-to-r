@@ -8,7 +8,7 @@
 
 ### Description
 
-This repository includes material for a hands-on workshop 'Introduction to R for biologists'. We show you some basics in R programming and some powerful things R can do *(tthat you cannot do with Excel)*. The aim is to give beginners the confidence to continue learning R. The focus is on data wrangling and visualisation of biological data (RNA-seq), as we believe this is a productive and engaging way to start learning R. 
+This repository includes material for a hands-on workshop 'Introduction to R for biologists'. We show you some basics in R programming and some powerful things R can do *(that you cannot do with Excel)*. The aim is to give beginners the confidence to continue learning R. The focus is on data wrangling with tidyverse and visualisation of biological data (RNA-seq) with ggplot2, as we believe this is a productive and engaging way to start learning R. 
 
 ### Installation Requirements
 
