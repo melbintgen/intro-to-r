@@ -1,6 +1,6 @@
 ---
 title: "Introduction to R for Biologists"
-author: "Maria Doyle, Jessica Chung, Vicky Perreau, Kim-Anh Lê Cao"
+author: "Maria Doyle, Jessica Chung, Vicky Perreau, Kim-Anh Lê Cao, Saritha Kodikara"
 date: "`r format(Sys.time(), '%d %B %Y')`"
 output:
   html_document:
@@ -63,7 +63,7 @@ some powerful things R can do (things that would be more difficult to do
 with Excel). The aim is to give beginners the confidence to continue
 learning R, so the focus here is on tidyverse and visualisation of
 biological data, as we believe this is a productive and engaging way to
-start learning R. After this short introduction you could use [this
+start learning R. After this short introduction you can read [this
 book](https://bookdown.org/ansellbr/WEHI_tidyR_course_book) to dive a
 bit deeper.
 
@@ -72,7 +72,7 @@ this document. R is a language that is continuously evolving. They use
 Google extensively to use many new tricks. Do not hesitate to do the
 same!
 
-# Intro to R and RStudio
+# 1. Intro to R and RStudio
 
 RStudio is an interface that makes it easier to use R. There are four
 windows in RStudio. The screenshot below shows an [analogy linking the
@@ -88,9 +88,9 @@ cooking](https://twitter.com/RLadiesNCL/status/1138812826917724160).
 There are two ways to work in RStudio in the console or in a script. We
 can type a command in the console and press `Enter` to run it.
 
-**Exercise:** Run the command below in the console.
+**Your turn 1.1:** Run the command below in the console.
 
-```{r}
+```{r, eval = FALSE}
 1 + 1
 ```
 
@@ -102,11 +102,11 @@ the line you want to run, and then either:
 
 We can also highlight multiple lines at once and run them at once.
 
-**Exercise:** Create a script, from the top menu in RStudio:
+**Your turn 1.2:** Create a script from the top menu in RStudio:
 `File > New File > R Script`, then type the command below in the script
 and run it with one or the two options.
 
-```{r}
+```{r, eval = FALSE}
 2 + 2
 ```
 
@@ -127,12 +127,12 @@ Comments are notes to ourself or others about the commands in the
 script. they are useful also when you share code with oters. Comments
 start with a `#` which tells R not to run them as commands.
 
-```{r}
+```{r, eval = FALSE}
 # testing R
 2 + 2
 ```
 
-Keeping an accurate record of how you've manipulated your data is
+Keeping an accurate record of how you' have manipulated your data is
 important for [reproducible
 research](https://ropensci.github.io/reproducibility-guide/sections/introduction/).
 Writing detailed comments and documenting your work are useful reminders
@@ -146,7 +146,9 @@ beautiful analysis reports.
 ## Working directory
 
 Opening an RStudio session launches it from a specific location. This is
-the 'working directory'. *R looks in the working directory by default to
+the 'working directory'. 
+
+*R looks in the working directory by default to
 read in data and save files.* You can find out what the working
 directory is by using the command `getwd()`. This shows you the path to
 your working directory in the console. It will be in this format:
@@ -157,13 +159,13 @@ To define the working directory, in RStudio click in the menu on
 `Session > Set Working Directory > Choose directory` and choose your
 folder.
 
-**Exercise:** Create a folder for this course somewhere on your
+**Your turn 1.3:** Create a folder for this course somewhere on your
 computer. Name the folder for example, `Intro_R_course`. Then, to set
 this folder as your working directory. Set your working directory as
 indicated above, then click 'Open'. The files tab will now show the
 contents of your new folder.
 
-**Exercise:** Save the script you created in the previous section as
+**Your turn 1.4:** Save the script you created in the previous section as
 `intro.R` in this directory. You can do this by clicking on
 `File > Save` and the default location should be the current working
 directory (e.g. `Intro_R_course`).
@@ -187,7 +189,7 @@ We then load the package in our working directory:
 library("tidyverse")
 ```
 
-# Packages in the CRAN or Bioconductor
+# 2. Packages in the CRAN or Bioconductor
 
 Packages hosted on the [CRAN](https://cran.r-project.org/) (stands for
 Comprehensive R Archive Network) are often generic package for all sorts
@@ -223,10 +225,10 @@ In mathematics, a function defines a relation between inputs and output.
 In R (and coding languages) it is the same. A function takes several
 inputs called *arguments* inside parentheses, and output some results.
 
-**Exercise:** Compare these two outputs. In the second line we use the
+**Your turn 2.1:** Compare these two outputs. In the second line we use the
 function `sum`.
 
-```{r}
+```{r, eval = FALSE}
 2+2
 sum(2,2)
 ```
@@ -239,7 +241,7 @@ for other parts of the analysis. We can use either the operator `=` or
 left-hand-side, and the result from the operation is on the
 right-hand-side.
 
-**Exercise:** Compare the two outputs.
+**Your turn 2.2:** Compare the two outputs.
 
 ```{r}
 result1 = 2+2
@@ -253,6 +255,7 @@ result2
 
 ::: info
 **ⓘ Nomenclature of objects**\
+
 We recommend you use explicit naming conventions of your objects, for
 example `data.raw1` and `data.normalised` rather than `data1` and
 `data2` so that you can remember various steps in your analysis.
@@ -300,7 +303,7 @@ reasons for errors are:
 To see examples of some R error messages with explanations see
 [here](https://github.com/noamross/zero-dependency-problems/issues/7)
 
-# Let's get started with data!
+# 3. Let's get started with data!
 
 In this tutorial, we will learn some R through creating plots to
 visualise data from an RNA-seq experiment.
@@ -341,7 +344,7 @@ the cooking analogy in the first screenshot, `install.packages()` is
 like buying a saucepan, `library()` is taking it out of the cupboard to
 use it.
 
-**Exercise:** Load your tidyverse library. If you get an error message,
+**Your turn 3.1:** Load your tidyverse library. If you get an error message,
 it means that you have not installed it! (see the code in the previous
 section).
 
@@ -355,16 +358,16 @@ The files we will use are csv comma-separated, so we will use the
 `read_csv()` function from the tidyverse. There is also a `read_tsv()`
 function for tab-separated values.
 
-**Exercise:** Download the data.zip file
+**Your turn 3.2:** Download the data.zip file
 [here](https://melbintgen.github.io/intro-to-r/data.zip).
-Unzip the file and store this `data` folder in your working directory.
+Unzip the file and **store the content in the `data` folder in your working directory**.
 
 We will use the counts file called
 `GSE60450_GeneLevel_Normalized(CPM.and.TMM)_data.csv` stored in the data folder. The path to the
 file should be
 `data/GSE60450_GeneLevel_Normalized(CPM.and.TMM)_data.csv`.
 
-**Exercise:** Load the data into your R working directory. We will store
+**Your turn 3.3:** Load the data into your R working directory. We will store
 the contents of the counts file in an **object** called `counts`.
 
 ```{r}
@@ -375,28 +378,27 @@ counts <- read_csv("data/GSE60450_GeneLevel_Normalized(CPM.and.TMM)_data.csv")
 sampleinfo <- read_csv("data/GSE60450_filtered_metadata.csv")
 ```
 
-Do not be afraid of the outputs. There is some information output by
-read_csv on "column specification" It tells us that there is a missing
+No need to be overwhelmed by the outputs! It contains information regarding  "column specification" (telling us that there is a missing
 column name in the header and it has been filled with the name "...1",
-which is how read_csv handles missing column names by default. It also
-tells us what data types read_csv is detecting in each column. Columns
-with text characters have been detected (col_character) and also columns
-with numbers (col_double). We won't get into the details of R data types
+which is how read_csv handles missing column names by default). We will fix this later. It also
+tells us what data types `read_csv` is detecting in each column. Columns
+with text characters have been detected (`col_character`) and also columns
+with numbers (`col_double`). We won't get into the details of R data types
 in this tutorial but they are important to know when you get more
 proficient in R. You can read more about them in the [R for Data Science
 book](https://r4ds.had.co.nz/vectors.html#important-types-of-atomic-vector).
 
-# Looking at the data
+# 4. Looking at the data
 
 When assigning a value to an object, R does not print the value. We do
 not see what is in `counts` or `sampleinfo`. But there are ways we can
 look at the data.
 
-**Exercise:** Option 1: Click on the `counts` object in your global
+**Your turn 3.4:** Option 1: Click on the `counts` object in your global
 environment panel on the right-hand-side of RStudio. It will open a new
 Tab.
 
-**Exercise:** Option 2: type the name of the object and this will print
+**Your turn 3.5:** Option 2: type the name of the object and this will print
 the first few lines and some information, such as number of rows.
 
 ```{r}
@@ -426,9 +428,9 @@ tail(sampleinfo)
 It is very useful to check that what you have read in R corresponds to
 the number of lines and columns of the data;
 
-**Exercise:** Check how many rows and columns are in `sampleinfo`.
+**Your turn 3.6:** Check how many rows and columns are in `sampleinfo`.
 
-```{r}
+```{r, eval = FALSE}
 dim(sampleinfo)
 ```
 
@@ -439,9 +441,9 @@ the number of rows and columns in the objects we have in our session.
 
 ## Column and row names of the data
 
-**Exercise:** Check the column and row names used in in `sampleinfo`. Comment on the results you get. 
+**Your turn 3.7:** Check the column and row names used in in `sampleinfo`. Comment on the results you get. 
 
-```{r}
+```{r, eval = FALSE}
 colnames(sampleinfo)
 rownames(sampleinfo)
 ```
@@ -451,7 +453,7 @@ rownames(sampleinfo)
 We can access individual columns by name using the `$` symbol. For
 example:
 
-```{r}
+```{r, eval = FALSE}
 sampleinfo$characteristics
 ```
 
@@ -464,28 +466,28 @@ columns. You can access these rows, or columns by adding brackets.
 For example, here we extract the first row '1' of the data, as indicated
 on the *left-hand-side* of the colon:
 
-```{r}
+```{r, eval = FALSE}
 sampleinfo[1,]
 ```
 
 Here we extract the firsecond column '2' of the data, as indicated on
 the *right-hand-side* of the colon:
 
-```{r}
+```{r, eval = FALSE}
 sampleinfo[,2]
 ```
 
 You can use a combination of number of row and column to extract one
 element in the matrix:
 
-```{r}
+```{r, eval = FALSE}
 sampleinfo[1,2]
 ```
 
-**Exercise:** Work out what the following commands mean, then include
+**Your turn 3.8:** Work out what the following commands mean, then include
 those to subset `sampleinfo` (either on the rows or the columns):
 
-```{r}
+```{r, eval = FALSE}
 1:3
 c(1, 3)
 ```
@@ -508,15 +510,15 @@ default, read_csv function assigned a name of "\...1" to it. We can
 change this column to something more descriptive by combining what what
 we have learnt.
 
-**Exercise:** Describe what the next command line is doing:
+**Your turn 3.9:** Describe what the next command line is doing:
 
-```{r}
+```{r, eval = FALSE}
 colnames(sampleinfo)[1] <- "sample_id"
 # check
 sampleinfo
 ```
 
-**Exercise:** Do the same to rename the first column name from "\...1"
+**Your turn 3.10:** Do the same to rename the first column name from "\...1"
 to "gene_id" in `counts`.
 
 <button onclick="myFunction(&#39;q1&#39;)">
@@ -541,7 +543,7 @@ colnames(counts)[1] <- "gene_id"
 there are, the first few entries, and what data type they are e.g.
 character or numbers (double or integer).
 
-```{r}
+```{r, eval = FALSE}
 str(sampleinfo)
 ```
 
@@ -551,7 +553,7 @@ as the min, max, mean and median. We will demonstrate this with the
 counts file as it contains numeric data. For character columns it shows
 us the length (how many rows).
 
-```{r}
+```{r, eval = FALSE}
 summary(counts)
 ```
 
@@ -568,7 +570,7 @@ context.
 
 </p>
 
-# Formatting data
+# 5. Formatting data
 
 ## Converting from wide to long format
 
@@ -618,10 +620,10 @@ seqdata <- pivot_longer(counts, cols = -c("gene_id", "gene_symbol"),
                         names_to = "Sample", values_to = "Count")
 ```
 
-**Exercise:** Type each command line above, then look at the data. Check
+**Your turn 5.1:** Type each command line above, then look at the data. Check
 their dimension (`dim()`) and length (`length()`)
 
-```{r}
+```{r, eval = FALSE}
 seqdata
 ```
 
@@ -644,7 +646,7 @@ called "Sample" in the first table (`seqdata`) and the column called
 allinfo <- full_join(seqdata, sampleinfo, by = join_by(Sample == sample_id))
 ```
 
-**Exercise:** Examine the code above, run and then look at the data.
+**Your turn 5.2:** Examine the code above, run and then look at the data.
 
 <button onclick="myFunction(&#39;q2&#39;)">
 
@@ -653,91 +655,16 @@ Show solutions
 </button>
 
 ::: {#q2 style="display:none"}
-```{r eval=FALSE}
+```{r eval=TRUE}
 allinfo
 ```
 :::
 
 <!-- end solutions -->
 
-#### Exercise
 
-1.  View the help page of the `head` function and find the "Arguments"
-    heading. What does the `n` argument do? How many rows and columns do
-    you get with `head(sampleinfo, n = 8)`?\
-2.  Store the output of the first 20 lines of the `counts` object in a
-    new variable named `subset_counts`. What is the gene_symbol in row
-    20?\
-3.  View the values in the `GSM1480291` column from your `subset_counts`
-    object using the `$` subsetting method. What is the 5th value?\
-4.  View the help page of the `mean` function. What is the mean of the
-    column of values you obtained from the previous question?\
-5.  How can you use `pivot_longer` to transform `dat` into a 'tidy' data
-    called `dat_long` that contains 3 columns (sample, experiment,
-    count).
 
-```         
-dat <-  tibble(sample = 1:10,
-               experiment_1 = rnorm(10),
-               experiment_2 = rnorm(10))
-```
-
-`dat_long` should look similar to what you get if you paste this into
-the console (the values in the count column will be different):
-
-```         
-dat_long <- tibble(sample = rep(1:10, each=2),
-                   experiment = rep(c("experiment_1", "experiment_2"), 10),
-                   count = rnorm(20))
-dat_long
-```
-
-6.  Say you have another table containing sample information with
-    samples assigned to either "Mutant" or "Control" such as:
-
-```         
-sample_info <- tibble(sample = 1:100,
-                      group = c(rep("Mutant", 50), rep("Control", 50)))
-```
-
-Join `dat_long` to `sample_info` using the common column called
-"sample". How many rows do you get if you use i) `full_join`, ii)
-`left_join`, iii) `right_join`, iv) `inner_join`?
-
-<button onclick="myFunction(&#39;q3&#39;)">
-
-Show solutions
-
-</button>
-
-::: {#q3 style="display:none"}
-#### Answers
-
-1.  The `n` argument specifies the number of elements the `head()`
-    function will return. `head(sampleinfo, n = 8)` will return the
-    first 8 rows of the `sampleinfo` object.
-2.  `subset_counts <- head(counts, n = 20)`
-3.  `subset_counts$GSM1480291`
-4.  137.8874 (which is obtained by running
-    `mean(subset_counts$GSM1480291)`)
-5.  `dat_long <- pivot_longer(dat, cols=c(experiment_1, experiment_2), names_to="experiment", values_to="count")`
-6.  
-
-<!-- -->
-
-i)  110 from running
-    `nrow(full_join(dat_long, sample_info, by = join_by(sample == sample)))`
-ii) 20 from running
-    `nrow(left_join(dat_long, sample_info, by = join_by(sample == sample)))`
-iii) 110 from running
-     `nrow(right_join(dat_long, sample_info, by = join_by(sample == sample)))`
-iv) 20 from running
-    `nrow(inner_join(dat_long, sample_info, by = join_by(sample == sample)))`
-:::
-
-<!-- end solutions -->
-
-# Plotting with **`ggplot2`**
+# 6. Plotting with **`ggplot2`**
 
 **`ggplot2`** is a plotting package that makes it simple to create
 complex plots. One really great advantage compared to classic R packages
@@ -754,7 +681,7 @@ time when making figures with **`ggplot2`**.
 <p>
 
 ::: info
-\*\*ⓘ Ggplot architecture\*\
+\*\*ⓘ Ggplot architecture\**\
 Ggplot graphics are built step by step by adding new elements using the
 `+`. Adding layers in this fashion allows for extensive flexibility and
 customization of plots.
@@ -789,7 +716,7 @@ unusual.
 *Note: with ggplot the "+" must go at the end of the line, it can't go
 at the beginning.*
 
-**Exercise:** Run the following command line. Identify the key functions
+**Your turn 6.1:** Run the following command line. Identify the key functions
 `aes` and type of plot:
 
 ```{r}
@@ -822,9 +749,9 @@ ggplot(data = allinfo, mapping = aes(x = Sample, y = log2(Count + 1))) +
 The box plots show that the distributions of the samples are not
 identical but they are not very different.
 
-#### Exercise: violin plot
+## Violin plot
 
-Box plots are useful summaries, but hide the shape of the distribution.
+**Your turn 6.2:** Boxplots are useful summaries, but hide the shape of the distribution.
 For example, if the distribution is bimodal, we would not see it in a
 boxplot. An alternative to the boxplot is the **violin plot**, where the
 shape (of the density of points) is drawn.
@@ -840,7 +767,6 @@ Show solutions
 </button>
 
 ::: {#q4 style="display:none"}
-#### Answers
 
 ```{r eval=FALSE}
 # Plotting a violin plot
@@ -851,11 +777,11 @@ ggplot(data = allinfo, mapping = aes(x = Sample, y = log2(Count + 1))) +
 
 <!-- end solutions -->
 
-# Colouring by categories
+## Colouring by categories
 
 Let's add a different colour for each sample.
 
-**Exercise:** Get the help file for `geom_boxplot` and scroll down to
+**Your turn 6.3:** Get the help file for `geom_boxplot` and scroll down to
 **Aesthetics** heading. It specifies that there is an option for colour.
 
 In the code below we specify we want to map the Sample column to
@@ -882,76 +808,8 @@ plots, whereas `colour =` is used to colour lines and points.
 A really nice feature about ggplot is that we can easily colour by
 another variable by simply changing the column we give to `fill =`.
 
-#### Exercise
 
-Modify the plot above. Colour by other variables (columns) in the
-metadata file:
-
-1.  characteristics
-2.  immunophenotype
-3.  \`developmental stage\` (As there is a space in the column name we
-    need to use backticks around the name (\`\`).
-
-*Note: backticks are not single quotes (''). The backtick key is usually
-at the top left corner of a laptop keyboard under the ESC key. Check
-what happens if you don't use backticks.)*
-
-<button onclick="myFunction(&#39;q5&#39;)">
-
-Show solutions
-
-</button>
-
-::: {#q5 style="display:none"}
-#### Answers
-
-```{r eval=FALSE}
-# Plot characteristics
-ggplot(data = allinfo, 
-       mapping = aes(x = Sample, y = log2(Count + 1), fill = characteristics)) + 
-  geom_boxplot() 
-
-# Plot immunophenotype
-ggplot(data = allinfo,
-       mapping = aes(x = Sample, y = log2(Count + 1), fill = immunophenotype)) + 
-  geom_boxplot()
-
-# Plot developmental stage
-ggplot(data = allinfo, 
-       mapping = aes(x = Sample, y = log2(Count + 1), fill = `developmental stage`)) + 
-  geom_boxplot() 
-```
-:::
-
-<!-- end solutions -->
-
-#### Optional exercise
-
-The `geom_boxplot` function can also take in additional arguments. For
-example, you can decrease the size of the outlier points by using the
-`outlier.size` argument like so: `geom_boxplot(outlier.size = 0.5)`.
-View the help page for `geom_boxplot`. Can you find a way to hide
-outliers altogether? Plot a boxplot with hidden outliers.
-
-<button onclick="myFunction(&#39;q6&#39;)">
-
-Show solutions
-
-</button>
-
-::: {#q6 style="display:none"}
-#### Answers
-
-```{r eval=FALSE}
-ggplot(data = allinfo, 
-       mapping = aes(x = Sample, y = log2(Count + 1), fill = characteristics)) + 
-  geom_boxplot(outlier.shape = NA)
-```
-:::
-
-<!-- end solutions -->
-
-# Creating subplots for each gene using faceting
+## Creating subplots for each gene using faceting
 
 With ggplot we can easily make subplots using *faceting*. For example we
 can make
@@ -968,7 +826,7 @@ First we use the function `mutate()` to add a column with shorter group
 names to use in the plot, as the group names in the characteristics
 column are quite long.
 
-**Exercise:** Run the code below, then look at the data using the
+**Your turn 6.4:** Run the code below, then look at the data using the
 `head()` function. What haschanged?
 
 ```{r}
@@ -1016,7 +874,7 @@ check if a value is in a set of values.
 mygenes_counts <- filter(allinfo, gene_symbol %in% mygenes)
 ```
 
-**Exercise:** Run the code above and look at `mygenes_counts`, what did
+**Your turn 6.5:** Run the code above and look at `mygenes_counts`, what did
 it do?
 
 <p>
@@ -1088,14 +946,14 @@ ggplot(data = mygenes_counts,
   facet_wrap(~ gene_symbol)
 ```
 
-# Saving plots
+# 7. Saving plots
 
 We can save plots interactively by clicking Export in the Plots window
 and saving as e.g. "myplot.pdf". Or we can output plots to pdf using
 `pdf()` followed by `dev.off()`. We put our plot code after the call to
 `pdf()` and before closing the plot device with `dev.off()`.
 
-Let's save our last plot.
+**Your turn 7.1** Let's save our last plot.
 
 ```{r, eval=FALSE}
 pdf("myplot.pdf")
@@ -1106,7 +964,7 @@ ggplot(data = mygenes_counts,
 dev.off()
 ```
 
-# R Markdown for reproducible reports
+# 8. R Markdown for reproducible reports
 
 R markdown is a great tool embedded in RStudio that will produce
 reproducible and very neat reports.
@@ -1115,7 +973,7 @@ R Markdown is a specific type of file format (**.Rmd**) designed to
 produce documents that include both code and text. We use it *in place*
 of the R script, as you will see in the exercises below.
 
-**Exercise:** Download the Rmarkdown template [here](https://melbintgen.github.io/intro-to-r/Rmd_template.zip). Copy the content of
+**Your turn 8.1:** Download the Rmarkdown template [here](https://melbintgen.github.io/intro-to-r/Rmd_template.zip). Copy the content of
 this folder **into** your Working directory.
 
 <p>
@@ -1133,13 +991,13 @@ The working directory should look like this:
 
 </p>
 
-**Exercise:** Together, let's go through the different steps of
+**Your turn 8.2:** Together, let's go through the different steps of
 compiling the .Rmd file to produce a .pdf report.
 
 A good place to start with RMarkdown is with this
 [cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf).
 
-# Main exercises
+# 9. Main exercises
 
 ## Exercise 1: plotting
 
@@ -1170,7 +1028,7 @@ Show solutions
 
 #### Answers
 
-1
+Answer 1
 ```{r, eval=FALSE}
 # read in raw counts file
 raw_counts <- read_csv("data/GSE60450_GeneLevel_Raw_data.csv")
@@ -1197,7 +1055,7 @@ ggplot(data = mygenes_raw_counts,
   facet_wrap(~ gene_symbol)
 ```
 
-2
+Answer 2
 ```{r, eval=FALSE}
 # read in counts file
 counts_GSE63310 <- read_csv("data/GSE63310_GeneLevel_Normalized(CPM.and.TMM)_data.csv")
@@ -1272,11 +1130,10 @@ gene.info<-full_join(gene.name, gene.description, by = join_by(gene.ID))
 
 <!-- end solutions -->
 
-# Session Info
+# 10. Session Info
 
-The last thing we'll do run the `sessionInfo()` function. This function
-prints out details about your working environment such as the version of
-R you're running, loaded packages, and package versions. Printing out
+At the end of your report, we recommend you run the `sessionInfo()` function which prints out details about your working environment such as the version of
+R yo are running, loaded packages, and package versions. Printing out
 `sessionInfo()` at the end of your analysis is good practice as it helps
 with reproducibility in the future.
 
@@ -1284,7 +1141,7 @@ with reproducibility in the future.
 sessionInfo()
 ```
 
-# Key Points
+# 11. Key Points
 
 -   Tabular data can be loaded into R with the tidyverse functions
     `read_csv()` and `read_tsv()`
