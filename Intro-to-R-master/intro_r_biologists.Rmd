@@ -499,7 +499,7 @@ columns):
 c(1, 3)
 ```
 
-<button onclick="myFunction(&#39;q7&#39;)">
+<button onclick="myFunction(&#39;q45&#39;)">
 
 Show solutions
 
@@ -652,7 +652,7 @@ seqdata
 ```
 
 
-<button onclick="myFunction(&#39;q7&#39;)">
+<button onclick="myFunction(&#39;q51&#39;)">
 
 Show solutions
 
