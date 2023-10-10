@@ -745,7 +745,7 @@ for different types of plots. Three things are required for a ggplot:
 There are different geoms we can use to create different types of plot
 e.g. `geom_line()` `geom_point()`, `geom_boxplot()`. To see the geoms
 available take a look at the ggplot2 help or the handy [ggplot2
-cheatsheet](https://github.com/rstudio/cheatsheets/raw/master/data-visualization-2.1.pdf).
+cheatsheet](https://rstudio.github.io/cheatsheets/data-visualization.pdf).
 Or if you type "geom" in RStudio, RStudio will show you the different
 types of geoms you can use.
 
