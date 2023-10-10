@@ -124,7 +124,7 @@ re-use the code and remember what we have done in the past.
 ## Commenting
 
 Comments are notes to ourself or others about the commands in the
-script. they are useful also when you share code with oters. Comments
+script. They are useful also when you share code with others. Comments
 start with a `#` which tells R not to run them as commands.
 
 ```{r, eval = FALSE}
@@ -139,9 +139,10 @@ Writing detailed comments and documenting your work are useful reminders
 to your future self (and anyone else reading your scripts) on what your
 code does.
 
-In the main exercise we will use
+In Section 8 we describe how to use
 [Rmarkdown](https://rmarkdown.rstudio.com/) to create reproducible and
-beautiful analysis reports.
+beautiful analysis reports. You will use our R markdown template in the
+exercise.
 
 ## Working directory
 
@@ -186,7 +187,7 @@ install.packages("tidyverse")
 We then load the package in our working directory:
 
 ```{r, eval=FALSE}
-library("tidyverse")
+library(tidyverse)
 ```
 
 # 2. Packages in the CRAN or Bioconductor
@@ -216,6 +217,7 @@ updated and maintained every six months.
 Here is how the example vignette looks like:
 
 ```{r, eval=FALSE}
+library(mixOmics)
 browseVignettes("mixOmics")
 ```
 
@@ -243,7 +245,7 @@ right-hand-side.
 
 **Your turn 2.2:** Compare the two outputs.
 
-```{r}
+```{r, eval = FALSE}
 result1 = 2+2
 result1
 
@@ -290,11 +292,11 @@ encounter at least one error message during this tutorial. Some common
 reasons for errors are:
 
 -   Case sensitivity. In R, as in other programming languages, case
-    sensitivity is important. ?install.packages is different to
-    ?Install.packages.
+    sensitivity is important. `?install.packages` is different to
+    `?Install.packages`.
 -   Missing commas
--   Mismatched parentheses or brackets or unclosed parentheses,
-    bracketsand apostrophes
+-   Mismatched parentheses or brackets or unclosed parentheses, brackets
+    or apostrophes
 -   Not quoting file paths
 -   When a command line is unfinished, the "+" in the console will
     indicate it is awaiting further instructions. Press ESC to cancel
@@ -329,7 +331,7 @@ samples per group and 6 groups, 12 samples in total.
 
 ![](images/mouse_exp.png){width="396"}
 
-## Tidyverse
+## Tidyverse package
 
 The `tidyverse` package is a collection of R packages that includes the
 extremely widely used **`ggplot2`** package.
@@ -346,7 +348,7 @@ use it.
 
 **Your turn 3.1:** Load your tidyverse library. If you get an error
 message, it means that you have not installed it! (see the code in the
-previous section).
+Section 2).
 
 ```{r, message=FALSE, warning=FALSE}
 library(tidyverse)
@@ -429,7 +431,7 @@ tail(sampleinfo)
 ## Dimension of the data
 
 It is very useful to check that what you have read in R corresponds to
-the number of lines and columns of the data;
+the number of lines and columns of the data.
 
 **Your turn 4.3:** Check how many rows and columns are in `sampleinfo`.
 
@@ -496,6 +498,25 @@ columns):
 1:3
 c(1, 3)
 ```
+
+<button onclick="myFunction(&#39;q7&#39;)">
+
+Show solutions
+
+</button>
+
+::: {#q45 style="display:none"}
+
+```{r, eval = FALSE}
+# on the columns
+sampleinfo[,1:3]
+# on the rows
+sampleinfo[c(1, 3),]
+```
+
+:::
+
+<!-- end solutions -->
 
 <p>
 
@@ -629,6 +650,24 @@ Check their dimension (`dim()`) and length (`length()`)
 ```{r, eval = FALSE}
 seqdata
 ```
+
+
+<button onclick="myFunction(&#39;q7&#39;)">
+
+Show solutions
+
+</button>
+
+::: {#q51 style="display:none"}
+
+```{r, eval = FALSE}
+dim(seqdata)
+length(seqdata)
+```
+
+:::
+
+<!-- end solutions -->
 
 ## Joining two tables
 
@@ -955,7 +994,7 @@ and saving as e.g. "myplot.pdf". Or we can output plots to pdf using
 `pdf()` followed by `dev.off()`. We put our plot code after the call to
 `pdf()` and before closing the plot device with `dev.off()`.
 
-**Your turn 7.1** Let's save our last plot.
+**Your turn 7.1:** Let's save our last plot.
 
 ```{r, eval=FALSE}
 pdf("myplot.pdf")
@@ -1001,6 +1040,8 @@ A good place to start with RMarkdown is with this
 [cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf).
 
 # 9. Main exercises
+
+Choose one of the two following exercise, or use your own data to practice how to input them into R and make a few plots (exercise 1).
 
 ## Exercise 1: plotting
 
@@ -1108,10 +1149,8 @@ This exercise is useful to apply your learnings on how to wrangle data
 1.  We will look at the 'breast_tumors.csv', 'gene_description.txt' and
     'gene_name.xlsx' data files, then read each file using one of the
     appropriate function `read_csv()`, `read_tsv()` or `read_excel()`
-    (from readxl). Name each file appropriately. 
-    *Note: you will still
-    need to load readxl explicitly, because it is not a core tidyverse
-    package loaded via library(tidyverse).
+    (from the package `readxl`). Name each file appropriately. \*Note: you will 
+    need to load the package `readxl` first.
 
 2.  Extract the treatment variable from breast_tumor.csv, inspect and
     solve issues in this file (hint: there are some labelling
@@ -1163,14 +1202,16 @@ sessionInfo()
     `read_csv()` and `read_tsv()`
 -   Tidyverse functions such as `pivot_longer()`, `mutate()`,
     `filter()`, `select()`, `full_join()` can be used to manipulate data
--   A ggplot has 3 components: data (dataset), mapping (columns to plot)
-    and geom (type of plot). Different types of plots include
+-   A ggplot2 plot has 3 components: `data` (dataset), `mapping` (columns to plot)
+    and `geom` (type of plot). Different types of plots include
     `geom_point()`, `geom_jitter()`, `geom_line()`, `geom_boxplot()`,
     `geom_violin()`.
 -   `facet_wrap()` can be used to make subplots of the data
 -   The aesthetics of a ggplot can be modified, such as colouring by
     different columns in the dataset, adding labels or changing the
-    background
+    background.
+-   R markdown is a useful tool for reproducible analyses and reporting.
+-   Don't forget to practice on subsetting, checking the dimension of the data, extracting and amending the names of the rows and columns of your data.
 
 # Further Reading
 
