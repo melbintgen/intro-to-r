@@ -1051,7 +1051,7 @@ raw_allinfo <- mutate(raw_allinfo, Group = case_when(
        ))
 mygenes_raw_counts <- filter(raw_allinfo, gene_symbol %in% mygenes)
 
-ggplot(data = raw_allinfo, mapping = aes(x = Sample, y = log2(Count+1))) + 
+ggplot(data = raw_allinfo, mapping = aes(x = Sample, y = log2(Count+1), fill = Group)) + 
   geom_boxplot()
 
 
@@ -1078,7 +1078,14 @@ allinfo_GSE63310 <- full_join(seqdata_GSE63310, sampleinfo_GSE63310, by = join_b
 
 # Colouring by categories
 # characteristics
-ggplot(data = allinfo_GSE63310, mapping = aes(x = Sample, y = log2(Count + 1), fill = characteristics)) + 
+allinfo_GSE63310 <- mutate(allinfo_GSE63310, Group = case_when(
+  str_detect(characteristics, "CD29loCD61\\+.*luminal") ~  "l_CD29lo+",
+  str_detect(characteristics, "CD29loCD61-.*luminal")  ~  "l_CD29lo-",
+  str_detect(characteristics, "CD29hi.*Basal")  ~  "b_CD29hi",
+  str_detect(characteristics, "CD29hi.*mammary")  ~  "m_CD29hi",
+  str_detect(characteristics, "CommaD-beta-geo")  ~  "g_CommaD"
+))
+ggplot(data = allinfo_GSE63310, mapping = aes(x = Sample, y = log2(Count + 1), fill = Group)) + 
   geom_boxplot()
 
 # strain/background
@@ -1101,7 +1108,8 @@ This exercise is useful to apply your learnings on how to wrangle data
 1.  We will look at the 'breast_tumors.csv', 'gene_description.txt' and
     'gene_name.xlsx' data files, then read each file using one of the
     appropriate function `read_csv()`, `read_tsv()` or `read_excel()`
-    (from readxl). Name each file appropriately. NOTE: you will still
+    (from readxl). Name each file appropriately. 
+    *Note: you will still
     need to load readxl explicitly, because it is not a core tidyverse
     package loaded via library(tidyverse).
 
