@@ -1,6 +1,6 @@
 ---
 title: "Introduction to R for Biologists"
-author: "Maria Doyle, Jessica Chung, Vicky Perreau, Kim-Anh Lê Cao, Saritha Kodikara"
+author: "Maria Doyle, Jessica Chung, Vicky Perreau, Kim-Anh Lê Cao, Saritha Kodikara, Eva Hamrud"
 date: "`r format(Sys.time(), '%d %B %Y')`"
 output:
   html_document:
@@ -1223,15 +1223,15 @@ to upload your own data instead and apply your new learning!
 
 a.  Plot a boxplot. Do the samples look any different to the normalised
     counts?
-b.  Make subplots for the same set of 8 genes. Do they look any
+b.  Make subplots using jitter plots for the same set of 8 genes. Do they look any
     different to the normalised counts?
 
 <!-- -->
 
 2.  The normalised counts for another data set
     'GSE63310_GeneLvel_Normalized(CPM.an.TMM)\_data.csv' are also
-    available. Plot boxplots and violin plots colouring the samples
-    using different columns in the metadata file.
+    available. Make 2 boxplots, one colouring the samples by 
+    strain/background and one colouring them by age. 
 
 <button onclick="myFunction(&#39;q8&#39;)">
 
@@ -1242,14 +1242,18 @@ Show solutions
 ::: {#q8 style="display:none"}
 #### Answers
 
-Answer 1
+***Answer 1***
 
-```{r, eval=FALSE}
+```{r, eval=TRUE}
 # read in raw counts file
 raw_counts <- read_csv("data/GSE60450_GeneLevel_Raw_data.csv")
-raw_seqdata <- pivot_longer(raw_counts, cols = starts_with("GSM"), names_to = "Sample", 
+
+# format the data like we did in section 5 and 6 for plotting
+raw_seqdata <- pivot_longer(raw_counts, cols = starts_with("GSM"), names_to = "Sample",
                         values_to = "Count")
 raw_allinfo <- full_join(raw_seqdata, sampleinfo, by = join_by(Sample == sample_id))
+
+# add shortened category names
 raw_allinfo <- mutate(raw_allinfo, Group = case_when(
         str_detect(characteristics, "basal.*virgin") ~  "bvirg",
         str_detect(characteristics, "basal.*preg")  ~  "bpreg",
@@ -1258,21 +1262,24 @@ raw_allinfo <- mutate(raw_allinfo, Group = case_when(
         str_detect(characteristics, "luminal.*preg")  ~  "lpreg",
         str_detect(characteristics, "luminal.*lact")  ~  "llact"
        ))
-mygenes_raw_counts <- filter(raw_allinfo, gene_symbol %in% mygenes)
 
+# plot a boxplot of the raw counts
 ggplot(data = raw_allinfo, mapping = aes(x = Sample, y = log2(Count+1), fill = Group)) + 
   geom_boxplot()
 
+# filter the data for the same set of 8 genes as we did in section 6
+mygenes_raw_counts <- filter(raw_allinfo, gene_symbol %in% mygenes)
 
+# plot jitter plots of the 8 genes, faceted by genes and coloured by group
 ggplot(data = mygenes_raw_counts, 
        mapping = aes(x = Group, y = log2(Count + 1), colour = Group)) +
   geom_jitter() +
   facet_wrap(~ gene_symbol)
 ```
 
-Answer 2
+***Answer 2***
 
-```{r, eval=FALSE}
+```{r, eval=TRUE}
 # read in counts file
 counts_GSE63310 <- read_csv("data/GSE63310_GeneLevel_Normalized(CPM.and.TMM)_data.csv")
 colnames(counts_GSE63310)[1] <- "gene_id"
@@ -1281,12 +1288,12 @@ colnames(counts_GSE63310)[1] <- "gene_id"
 sampleinfo_GSE63310 <- read_csv("data/GSE63310_filtered_metadata.csv")
 colnames(sampleinfo_GSE63310)[1] <- "sample_id"
 
+# format the data
 seqdata_GSE63310 <- pivot_longer(counts_GSE63310, cols = -c("gene_id", "gene_symbol"), 
                         names_to = "Sample", values_to = "Count")
 allinfo_GSE63310 <- full_join(seqdata_GSE63310, sampleinfo_GSE63310, by = join_by(Sample == sample_id))
 
-# Colouring by categories
-# characteristics
+# add shortened category names
 allinfo_GSE63310 <- mutate(allinfo_GSE63310, Group = case_when(
   str_detect(characteristics, "CD29loCD61\\+.*luminal") ~  "l_CD29lo+",
   str_detect(characteristics, "CD29loCD61-.*luminal")  ~  "l_CD29lo-",
@@ -1294,14 +1301,16 @@ allinfo_GSE63310 <- mutate(allinfo_GSE63310, Group = case_when(
   str_detect(characteristics, "CD29hi.*mammary")  ~  "m_CD29hi",
   str_detect(characteristics, "CommaD-beta-geo")  ~  "g_CommaD"
 ))
+
+# Plot boxplots colouring by group
 ggplot(data = allinfo_GSE63310, mapping = aes(x = Sample, y = log2(Count + 1), fill = Group)) + 
   geom_boxplot()
 
-# strain/background
+# Plot boxplots colouring by strain/background
 ggplot(data = allinfo_GSE63310, mapping = aes(x = Sample, y = log2(Count + 1), fill = `strain/background`)) + 
   geom_boxplot()
 
-# age
+# Plot boxplots colouring by age
 ggplot(data = allinfo_GSE63310, mapping = aes(x = Sample, y = log2(Count + 1), fill = age)) + 
   geom_boxplot()
 ```
@@ -1335,7 +1344,10 @@ Show solutions
 ::: {#q9 style="display:none"}
 #### Answers
 
-```{r, eval=FALSE}
+```{r, eval=TRUE}
+# load the 'readxl' library - if this fails you may need to install it
+library(readxl)
+
 # read the files
 gene.exp<-read_csv("data/breast_tumors.csv")
 gene.description<-read_tsv("data/gene_description.txt",skip = 2, col_names  = FALSE)
@@ -1352,7 +1364,7 @@ gene.info<-full_join(gene.name, gene.description, by = join_by(gene.ID))
 
 <!-- end solutions -->
 
-# 10. Session Info
+# 9. Session Info
 
 At the end of your report, we recommend you run the `sessionInfo()`
 function which prints out details about your working environment such as
@@ -1364,7 +1376,7 @@ practice as it helps with reproducibility in the future.
 sessionInfo()
 ```
 
-# 11. Key Points
+# 10. Key Points
 
 -   Tabular data can be loaded into R with the tidyverse functions
     `read_csv()` and `read_tsv()`
@@ -1378,7 +1390,6 @@ sessionInfo()
 -   The aesthetics of a ggplot can be modified, such as colouring by
     different columns in the dataset, adding labels or changing the
     background.
--   R markdown is a useful tool for reproducible analyses and reporting.
 -   Don't forget to practice on subsetting, checking the dimension of the data, extracting and amending the names of the rows and columns of your data.
 
 # Further Reading
@@ -1395,7 +1406,7 @@ Visualisations](http://r-statistics.co/Top50-Ggplot2-Visualizations-MasterList-R
 
 ## Specifying colours
 
-We might want to change the colours. To see what colour names are
+You might want to control plotting colours. To see what colour names are
 available you can type `colours()`. There is also an [R colours
 cheatsheet](https://www.nceas.ucsb.edu/~frazier/RSpatialGuides/colorPaletteCheatsheet.pdf)
 that shows what the colours look like.
