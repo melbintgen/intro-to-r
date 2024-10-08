@@ -185,13 +185,13 @@ so that the working directory is set to your newly made folder `Intro_R_course`.
 In mathematics, a function defines a relation between inputs and output.
 In R (and coding languages) it is the same. A function (also called a command)
 takes several inputs called *arguments* inside parentheses, and output some results.
-We have actually already used a function in this workshop - `setwd`. This 
+We have actually already used a function in this workshop - `setwd()`. This 
 function takes an input (the path to where you want to working directory to
 be set) and performs an action (sets the working directory). Let's take a look
 at some more functions below. 
 
 **Your turn 1.6:** Compare these two outputs. In the second line we use
-the function `sum`.
+the function `sum()`.
 
 ```{r, eval = FALSE}
 2+2
@@ -264,7 +264,7 @@ example `data.raw1` and `data.normalised` rather than `data1` and
 # 2. R Packages
 
 We have seen that functions are really useful tools which can be used to manipulate data. 
-Although some basic functions, like `sum` and `setwd` are avaliable by default when you 
+Although some basic functions, like `sum()` and `setwd()` are avaliable by default when you 
 install R, some more exciting functions are not. There are thousands of R functions avaliable 
 for you to use, and functions are organised into groups called packages or libraries. An R 
 package contains a collection of functions (usually that perform related tasks), as well as 
@@ -320,7 +320,7 @@ As described above, every R package includes documentation to explain how to use
 For example, to find out what a function in R does, type a `?` before the name and help
 information will appear in the Help panel on the right in RStudio.
 
-**Your turn 2.4:** Find out what the `sum` command does. 
+**Your turn 2.4:** Find out what the `sum()` command does. 
 ```{r, eval=FALSE}
 ?sum
 ```
@@ -329,7 +329,7 @@ What is really important is to scroll down the examples to understand
 how the function can be used in practice. You can use this command line
 to run the examples:
 
-**Your turn 2.5:** Run some examples of the `sum` command.
+**Your turn 2.5:** Run some examples of the `sum()` command.
 ```{r, eval=FALSE}
 example(sum)
 ```
@@ -340,7 +340,6 @@ you might want to use.
 
 **Your turn 2.6:** Have a look at the `tidyverse` package vignette. 
 ```{r, eval=FALSE}
-library(mixOmics)
 browseVignettes("tidyverse")
 ```
 
@@ -405,8 +404,8 @@ samples per group and 6 groups, 12 samples in total.
 
 ## Tidyverse package
 
-The `tidyverse` package is a collection of R packages that includes the
-extremely widely used **`ggplot2`** package.
+The `tidyverse` package that we installed in section 2 is a collection of R packages 
+that includes the extremely widely used **`ggplot2`** package.
 
 The [tidyverse](https://www.tidyverse.org/) makes data science faster,
 easier and more fun.
@@ -428,9 +427,9 @@ library(tidyverse)
 
 ## Load the data
 
-The files we will use are csv comma-separated, so we will use the
-`read_csv()` function from the tidyverse. There is also a `read_tsv()`
-function for tab-separated values.
+The files we will use are in a format called csv (comma-separated values), 
+so we will use the `read_csv()` function from the tidyverse. There is also 
+a `read_tsv()` function for tab-separated values.
 
 **Your turn 3.2:** Download the data.zip file
 [here](https://melbintgen.github.io/intro-to-r/data.zip). Unzip the file
@@ -442,15 +441,12 @@ We will use the counts file called
 folder. The path to the file should be
 `data/GSE60450_GeneLevel_Normalized(CPM.and.TMM)_data.csv`.
 
-**Your turn 3.3:** Load the data into your R working directory. We will
-store the contents of the counts file in an **object** called `counts`.
+**Your turn 3.3:** Load the count data into your R working directory. We will
+store the contents of the counts file in an **object** called `counts`. 
 
 ```{r}
 # read in counts file
 counts <- read_csv("data/GSE60450_GeneLevel_Normalized(CPM.and.TMM)_data.csv")
-
-# read in metadata
-sampleinfo <- read_csv("data/GSE60450_filtered_metadata.csv")
 ```
 
 No need to be overwhelmed by the outputs! It contains information
@@ -465,6 +461,19 @@ important to know when you get more proficient in R. You can read more
 about them in the [R for Data Science
 book](https://r4ds.had.co.nz/vectors.html#important-types-of-atomic-vector).
 
+**Your turn 3.4:** Load the sample information data into your R working directory. We will store the contents of this file in an object called 
+`sampleinfo`. 
+
+```{r}
+# read in metadata
+sampleinfo <- read_csv("data/GSE60450_filtered_metadata.csv")
+```
+
+It is very common when looking at biological data that you have two types of data. One is the actual data (in this case, our `counts` object, which has the
+expression values of different genes in each sample). The other is **metadata**
+i.e. information about our samples (in this case, our `sampleinfo` object includes information about whether samples are from basal or luminal cells and
+whether the cells were from mice which are virgin/pregnant/lactating, etc.)
+
 # 4. Looking at the data
 
 When assigning a value to an object, R does not print the value. We do
@@ -477,99 +486,31 @@ Tab.
 
 **Your turn 4.2:** Option 2: type the name of the object and this will
 print the first few lines and some information, such as number of rows.
+Note that this is similar to how we looked at the value of objects we 
+assigned in section 1. 
 
 ```{r}
-sampleinfo
+counts
 ```
-
-We can also use `dim()` to see the dimensions of an object, the number
-of rows and columns.
 
 We can also take a look the first few lines with `head()`. This shows us
 the first 6 lines.
 
+**Your turn 4.3:** Use `head()` to look at the first few lines of `counts`. 
 ```{r}
-head(sampleinfo)
+head(counts)
 ```
 
 We can look at the last few lines with `tail()`. This shows us the last
 6 lines. This can be useful to check the bottom of the file, that it
 looks ok.
 
+**Your turn 4.4:** Use `tail()` to look at the last few lines of `counts`. 
 ```{r}
-tail(sampleinfo)
+tail(counts)
 ```
 
-## Dimension of the data
-
-It is very useful to check that what you have read in R corresponds to
-the number of lines and columns of the data.
-
-**Your turn 4.3:** Check how many rows and columns are in `sampleinfo`.
-
-```{r, eval = FALSE}
-dim(sampleinfo)
-```
-
-This show us there are 12 rows and 4 columns.
-
-In the Environment Tab in the top right panel in RStudio we can also see
-the number of rows and columns in the objects we have in our session.
-
-## Column and row names of the data
-
-**Your turn 4.4:** Check the column and row names used in in
-`sampleinfo`. Comment on the results you get.
-
-```{r, eval = FALSE}
-colnames(sampleinfo)
-rownames(sampleinfo)
-```
-
-## The `$` symbol
-
-We can access individual columns by name using the `$` symbol. For
-example:
-
-```{r, eval = FALSE}
-sampleinfo$characteristics
-```
-
-## Subsetting
-
-Subsetting is very important in R to extract parts of the data you want
-to analyse. In R, a data set has the form of a matrix with rows and
-columns. You can access these rows, or columns by adding brackets.
-
-For example, here we extract the first row '1' of the data, as indicated
-on the *left-hand-side* of the colon:
-
-```{r, eval = FALSE}
-sampleinfo[1,]
-```
-
-Here we extract the firsecond column '2' of the data, as indicated on
-the *right-hand-side* of the colon:
-
-```{r, eval = FALSE}
-sampleinfo[,2]
-```
-
-You can use a combination of number of row and column to extract one
-element in the matrix:
-
-```{r, eval = FALSE}
-sampleinfo[1,2]
-```
-
-**Your turn 4.5:** Work out what the following commands mean, then
-include those to subset `sampleinfo` (either on the rows or the
-columns):
-
-```{r, eval = FALSE}
-1:3
-c(1, 3)
-```
+**Your turn 4.5:** What are the cell type of the first 6 samples in the metadata for the Fu et al. 2015 experiment?
 
 <button onclick="myFunction(&#39;q45&#39;)">
 
@@ -579,11 +520,104 @@ Show solutions
 
 ::: {#q45 style="display:none"}
 
+```{r}
+head(sampleinfo)
+```
+
+The first 6 samples are luminal cells. 
+
+:::
+
+<!-- end solutions -->
+
+
+## Dimension of the data
+
+It is very useful to check that what you have read in R corresponds to
+the number of lines and columns that you expect to see in your data. 
+You can print the number of rows and columns using the function `dim()`. 
+
+**Your turn 4.6:** Check how many rows and columns are in `counts` and in `sampleinfo`. 
+
 ```{r, eval = FALSE}
-# on the columns
-sampleinfo[,1:3]
-# on the rows
-sampleinfo[c(1, 3),]
+dim(counts)
+dim(sampleinfo)
+```
+
+This show us there are 23735 rows and 14 columns in the count data (i.e. 23735 genes and 12 samples, note the first two columns are gene IDs and gene names).
+
+In the metadata there are 12 rows and 4 column (i.e. 12 samples and 4 bits of information per sample). 
+
+In the Environment Tab in the top right panel in RStudio we can also see
+the number of rows and columns in the objects we have in our session.
+
+## Column and row names of the data
+
+**Your turn 4.7:** Check the column and row names used in in
+`sampleinfo`. Comment on the results you get.
+
+```{r, eval = FALSE}
+colnames(sampleinfo)
+rownames(sampleinfo)
+```
+
+## The `$` symbol
+
+We can access individual columns by name using the `$` symbol. 
+
+**Your turn 4.8:** Extract the 'immunophenotype' column of the metadata. 
+```{r, eval = FALSE}
+sampleinfo$immunophenotype
+```
+
+## Subsetting
+
+Subsetting is very important in R to extract parts of the data you want
+to analyse. In R, a data set has the form of a matrix with rows and
+columns. You can access these rows or columns by using square brackets.
+
+For example, we can extract the first row '1' of the data, using the number
+on the *left-hand-side* of the comma.
+
+**Your turn 4.9:** Extract the first row using square brackets. 
+```{r, eval = FALSE}
+sampleinfo[1,]
+```
+
+Here we extract the second column '2' of the data, as indicated on
+the *right-hand-side* of the comma.
+
+**Your turn 4.10:** Extract the second column using square brackets. 
+```{r, eval = FALSE}
+sampleinfo[,2]
+```
+
+You can use a combination of number of row and column to extract one
+element in the matrix. 
+
+**Your turn 4.11:** Extract the element in the first row and second column. 
+```{r, eval = FALSE}
+sampleinfo[1,2]
+```
+
+**Your turn 4.12:** Work out what the following commands mean, then
+use one of them to subset `sampleinfo` so you extract the first 3 rows:
+
+```{r, eval = FALSE}
+1:3
+c(1, 3)
+```
+
+<button onclick="myFunction('q2')">
+
+Show solutions
+
+</button>
+
+::: {#q2 style="display:none"}
+
+```{r, eval = TRUE}
+sampleinfo[1:3,]
 ```
 
 :::
@@ -595,8 +629,8 @@ sampleinfo[c(1, 3),]
 ::: info
 **ⓘ The c() function**
 
-We use this function extremely often in R when we have multiple items
-that we are *combining* ('c' stands for concatening). We will see it
+We use the `c()` function extremely often in R when we have multiple items
+that we are *combining* ('c' stands for concatenating). We will see it
 again in this tutorial.
 :::
 
@@ -608,7 +642,7 @@ default, read_csv function assigned a name of "\...1" to it. We can
 change this column to something more descriptive by combining what what
 we have learnt.
 
-**Your turn 4.6:** Describe what the next command line is doing:
+**Your turn 4.13:** Describe what the next command line is doing:
 
 ```{r, eval = TRUE, show = FALSE}
 colnames(sampleinfo)[1] <- "sample_id"
@@ -616,7 +650,7 @@ colnames(sampleinfo)[1] <- "sample_id"
 sampleinfo
 ```
 
-**Your turn 4.7:** Do the same to rename the first column name from
+**Your turn 4.14:** Do the same to rename the first column name from
 "\...1" to "gene_id" in `counts`.
 
 <button onclick="myFunction(&#39;q1&#39;)">
@@ -628,6 +662,8 @@ Show solutions
 ::: {#q1 style="display:none"}
 ```{r}
 colnames(counts)[1] <- "gene_id"
+# check
+head(counts)
 ```
 :::
 
@@ -639,6 +675,7 @@ colnames(counts)[1] <- "gene_id"
 there are, the first few entries, and what data type they are e.g.
 character or numbers (double or integer).
 
+**Your turn 4.15:** Show the structure of the metadata
 ```{r, eval = FALSE}
 str(sampleinfo)
 ```
@@ -649,6 +686,7 @@ as the min, max, mean and median. We will demonstrate this with the
 counts file as it contains numeric data. For character columns it shows
 us the length (how many rows).
 
+**Your turn 4.16:** Generate summary statistics for the count data
 ```{r, eval = FALSE}
 summary(counts)
 ```
@@ -658,7 +696,7 @@ summary(counts)
 ::: info
 **ⓘ Multiple methods**\
 There are multiple ways to do things in R. For example we used the
-function `colnames` in the prevous exercise, but we could have used the
+function `colnames` in the previous exercise, but we could have used the
 `rename()` function. When programming, you will often find many ways to
 do the same thing. Often there is one obvious method depending on the
 context.
