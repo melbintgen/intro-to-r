@@ -3,7 +3,7 @@
 
 | Audience      | Prerequisites | Duration    |
 | ------------- | ------------- | ----------- |
-| Biologists    | Install R Studio          |~ 5 hours    |
+| Biologists    | Install R & R Studio          |~ 2.5 hours    |
 
 
 ### Description
