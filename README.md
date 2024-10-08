@@ -1,9 +1,10 @@
 # Introduction to R
 **Authors: Maria Doyle, Jessica Chung, Vicky Perreau, Kim-Anh L&#234; Cao, Saritha Kodikara**
+**Tutors: Eva Hamrud, Saritha Kodikara**
 
 | Audience      | Prerequisites | Duration    |
 | ------------- | ------------- | ----------- |
-| Biologists    | Install R Studio          |~ 5 hours    |
+| Biologists    | Install R & R Studio          |~ 2.5 hours    |
 
 
 ### Description
