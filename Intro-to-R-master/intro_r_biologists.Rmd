@@ -248,6 +248,28 @@ Y <- 2
 sum(X,Y)
 ```
 
+Remember, if you use the same object name multiple times, R will overwrite the previous object you had created. 
+
+**Your turn 1.11:** What is the value of X after running this code?
+```{r, eval = FALSE}
+X <- 5
+X <- 10
+```
+
+<button onclick="myFunction('q3')">
+
+Show solutions
+
+</button>
+
+::: {#q3 style="display:none"}
+
+X is 10, the previous value of 5 has been overwritten. 
+
+:::
+
+<!-- end solutions -->
+
 
 <p>
 
@@ -709,7 +731,7 @@ context.
 ## Converting from wide to long format
 
 We will first convert the data from wide format into long format to make
-it easier to work with and plot with the `ggplot` package.
+it easier to work with and so that we can plot the data with the `ggplot` package.
 
 Instead of multiple columns with counts for each sample, we just want
 one column containing all the expression values, as shown below:
@@ -719,48 +741,47 @@ one column containing all the expression values, as shown below:
 We can use `pivot_longer()` to easily change the format into long
 format.
 
+**Your turn 5.1:** Find out what `pivot_longer()` does and how to use it
 ```{r}
-seqdata <- pivot_longer(counts, cols = starts_with("GSM"), names_to = "Sample", 
-                        values_to = "Count")
+?pivot_longer
 ```
 
-*Explanation*: We use `cols = starts_with("GSM")` to tell the function
-we want to reformat the columns whose names start with "GSM".
-`pivot_longer()` will then reformat the specified columns into two new
-columns, which we're naming "Sample" and "Count". The
-`names_to = "Sample"` specifies that we want the new column containing
-the columns we sepcified with `cols` to be named "Sample", and the
-`values_to = "Count"` specifies that we want the new column contining
-the values to be named "Count".
+**Your turn 5.2:** Convert the counts data into long format and save it as a new object called `seqdata`
+```{r}
+seqdata <- pivot_longer(counts, cols = starts_with("GSM"), 
+                        names_to = "Sample", values_to = "Count")
+```
 
-We could also specify a column range to reformat. The command below
-would give us the same result as the previous command.
+*Explanation*: 
+We use `cols = starts_with("GSM")` to tell the function we want to reformat the columns whose names start with "GSM" (these columns are the ones where we have the gene counts).
+`pivot_longer()` will then reformat the specified columns into two new columns, which 
+we're naming "Sample" and "Count". 
+The`names_to = "Sample"` specifies that we want the new column containing the columns to be named "Sample", and the`values_to = "Count"` specifies that we want the new column containing the values to be named "Count".
 
+As explained earlier, in R there is often more than one way to do the same thing. We could
+get the same result by specifying the argument `cols` in a different way. For example, 
+instead of using `starts_with` we could use a range like the one you used in question 4.12. 
+
+**Your turn 5.3:** Convert the counts data into long format using a column range
 ```{r}
 seqdata <- pivot_longer(counts, cols = GSM1480291:GSM1480302, 
                         names_to = "Sample", values_to = "Count")
 ```
 
-Alternatively, we could specify the columns we *do not* want to reformat
-and `pivot_longer()` will reformat all the other columns. To do that we
-put **a minus sign "-"** in front of the column names that we don't want
+Another way we could do the same thing is by specifying the columns we *do not* want to reformat, this will tell `pivot_longer()` to reformat all the other columns. To do that 
+we put **a minus sign "-"** in front of the column names that we don't want
 to reformat. This is a pretty common way to use `pivot_longer()` as
 sometimes it is easier to exclude columns we don't want than include
 columns we do. The command below would give us the same result as the
 previous command.
 
+**Your turn 5.4:** Convert the counts data into long format by specifying which columns not to convert
 ```{r}
 seqdata <- pivot_longer(counts, cols = -c("gene_id", "gene_symbol"), 
                         names_to = "Sample", values_to = "Count")
 ```
 
-**Your turn 5.1:** Type each command line above, then look at the data.
-Check their dimension (`dim()`) and length (`length()`)
-
-```{r, eval = FALSE}
-seqdata
-```
-
+**Your turn 5.5:** Type each command line above, then look at the data, are all three of the `seqdata` objects you made the same?
 
 <button onclick="myFunction(&#39;q51&#39;)">
 
@@ -774,6 +795,8 @@ Show solutions
 dim(seqdata)
 length(seqdata)
 ```
+
+All three `seqdata` objects are the same, as we did the same conversion from wide to long format using 3 different methods. `seqdata` has 284820 rows and 4 columns, and has length 4. 
 
 :::
 
@@ -794,23 +817,27 @@ the two tables we want to join. We add
 called "Sample" in the first table (`seqdata`) and the column called
 "sample_id" in the second table (`sampleinfo`) when the values match:
 
+**Your turn 5.6:** Join the count data and metadata by matching sample IDs
 ```{r}
 allinfo <- full_join(seqdata, sampleinfo, by = join_by(Sample == sample_id))
 ```
 
-**Your turn 5.2:** Examine the code above, run and then look at the
-data.
+**Your turn 5.7:** Have a look at the new object you generated above and see what information it includes, how many columns does it have and what does each column tell you?
 
-<button onclick="myFunction(&#39;q2&#39;)">
+<button onclick="myFunction('q4')">
 
 Show solutions
 
 </button>
 
-::: {#q2 style="display:none"}
+::: {#q4 style="display:none"}
 ```{r eval=TRUE}
-allinfo
+dim(allinfo)
+colnames(allinfo)
 ```
+
+The `allinfo` object has 7 columns which tell you about the gene id and symbol, the same id, gene count, and sample information (characteristics, immunophenotype, and developmental stage). 
+
 :::
 
 <!-- end solutions -->
@@ -883,6 +910,8 @@ on the X axis and log\~ 2\~ Counts on the y axis. We can log the Counts
 within the `aes()`. The sample labels are also overlapping each other,
 we will show how to fix this later.
 
+**Your turn 6.2:** Generate a boxplot of log2 gene counts
+
 ```{r}
 ggplot(data = allinfo, mapping = aes(x = Sample, y = log2(Count))) + 
   geom_boxplot()
@@ -893,6 +922,7 @@ removed. This is because some of the genes have a count of zero in the
 samples and a log of zero is undefined. We can add +1 to every count to
 avoid the zeros being dropped ('psuedo-count').
 
+**Your turn 6.3:** Generate a boxplot of log2 gene counts + 1
 ```{r}
 ggplot(data = allinfo, mapping = aes(x = Sample, y = log2(Count + 1))) + 
   geom_boxplot()
@@ -903,22 +933,23 @@ identical but they are not very different.
 
 ## Violin plot
 
-**Your turn 6.2:** Boxplots are useful summaries, but hide the shape of
+Boxplots are useful summaries, but hide the shape of
 the distribution. For example, if the distribution is bimodal, we would
 not see it in a boxplot. An alternative to the boxplot is the **violin
 plot**, where the shape (of the density of points) is drawn.
 
-Let's choose a different geom to do another type of plot. Using the same
-data (same x and y values), try editing the code above to make a violin
-plot using the `geom_violin()` function.
+Let's choose a different geom to do another type of plot. 
 
-<button onclick="myFunction(&#39;q4&#39;)">
+**Your turn 6.4:**  Using the same data (same x and y values), try editing the code 
+above to make a violin plot using the `geom_violin()` function.
+
+<button onclick="myFunction('q5')">
 
 Show solutions
 
 </button>
 
-::: {#q4 style="display:none"}
+::: {#q5 style="display:none"}
 ```{r eval=TRUE}
 # Plotting a violin plot
 ggplot(data = allinfo, mapping = aes(x = Sample, y = log2(Count + 1))) + 
@@ -932,13 +963,12 @@ ggplot(data = allinfo, mapping = aes(x = Sample, y = log2(Count + 1))) +
 
 Let's add a different colour for each sample.
 
-**Your turn 6.3:** Get the help file for `geom_boxplot` and scroll down
+**Your turn 6.5:** Get the help file for `geom_boxplot` and scroll down
 to **Aesthetics** heading. It specifies that there is an option for
 colour.
 
-In the code below we specify we want to map the Sample column to
-`colour =`. As we are mapping colour to a column in our data we need to
-put this inside the `aes()`.
+**Your turn 6.6:** Map each sample to a colour using the `colour =` argument. 
+As we are mapping colour to a column in our data we need toput this inside `aes()`.
 
 ```{r}
 ggplot(data = allinfo, mapping = aes(x = Sample, y = log2(Count + 1), colour = Sample)) + 
@@ -949,12 +979,13 @@ Colouring the edges wasn't quite what we had in mind. Look at the help
 for `geom_boxplot` to see what other aesthetic we could use. Let's try
 `fill =` instead.
 
+**Your turn 6.7:** Map each sample to a colour using the `fill =` argument. 
 ```{r}
 ggplot(data = allinfo, mapping = aes(x = Sample, y = log2(Count + 1), fill = Sample)) + 
   geom_boxplot()
 ```
 
-That looks better. `fill =` is used to **fill** in areas in ggplot2
+That looks better. `fill =` is used to fill in areas in ggplot2
 plots, whereas `colour =` is used to colour lines and points.
 
 A really nice feature about ggplot is that we can easily colour by
@@ -971,14 +1002,12 @@ Here we will make stripcharts plotting expression by the groups (basal
 virgin, basal pregnant, basal lactating, luminal virgin, luminal
 pregnant, luminal lactating) for each gene.
 
-## Shorter category names
+### Shorter category names
 
-First we use the function `mutate()` to add a column with shorter group
-names to use in the plot, as the group names in the characteristics
-column are quite long.
+As we saw in question 5.5, our column names are quite long, and this might make them
+difficult to visualise on a plot. We can use the function `mutate()` to add another column to our `allinfo` object with shorter group names. 
 
-**Your turn 6.4:** Run the code below, then look at the data using the
-`head()` function. What haschanged?
+**Your turn 6.8:** Make a new column in `allinfo` with shortened category names using the below code. How has the object `allinfo` changed?
 
 ```{r}
 allinfo <- mutate(allinfo, Group = case_when(
@@ -1004,16 +1033,41 @@ Show solutions
 head(allinfo)
 ```
 
-We observe a new column called `Group` at the end.
+We observe a new column called `Group` at the end which has shortened category names, bvirg, lpreg, etc. 
+
 :::
 
 <!-- end solutions -->
 
-## Filter for genes of interest
+### Filter for genes of interest
 
-We choose 8 genes with the highest counts summed across all samples. The
-are listed here:
+**Your turn 6.9:** How many genes are there in our data?
 
+<button onclick="myFunction('q21')">
+
+Show solutions
+
+</button>
+
+::: {#q21 style="display:none"}
+#### Answers
+
+```{r}
+dim(counts)
+```
+
+There are 23735 rows in our original counts data, so we have data on 23735 different genes. Note: we didn't run `dim()` on our `allinfo` object because this has multiple rows per gene. 
+
+:::
+
+<!-- end solutions -->
+
+Like our data set, most RNA-seq data sets have information on thousands of genes, but most of them are usually not very interesting, so we may want to filter them. 
+
+Here, we choose 8 genes with the highest counts summed across all samples. They
+are listed here. 
+
+**Your turn 6.10:** Create an object with a list of the 8 most highly expressed genes
 ```{r}
 mygenes <- c("Csn1s2a", "Csn1s1", "Csn2", "Glycam1", "COX1", "Trf", "Wap", "Eef1a1")
 ```
@@ -1021,12 +1075,35 @@ mygenes <- c("Csn1s2a", "Csn1s1", "Csn2", "Glycam1", "COX1", "Trf", "Wap", "Eef1
 We filter our data for just these genes of interest. We use `%in%` to
 check if a value is in a set of values.
 
+**Your turn 6.11:** Filter the counts data to only include genes in the `mygenes` object
 ```{r}
 mygenes_counts <- filter(allinfo, gene_symbol %in% mygenes)
 ```
 
-**Your turn 6.5:** Run the code above and look at `mygenes_counts`, what
-did it do?
+**Your turn 6.12:** Can you figure out how many rows `mygenes_counts` will have without inspecting the object? Print the dimensions of the object to check if you're right. 
+
+<button onclick="myFunction('q11')">
+
+Show solutions
+
+</button>
+
+::: {#q11 style="display:none"}
+#### Answers
+
+There is one row per sample per gene in `mygenes_counts` (as is the case in `allinfo`). As there are 8 genes left after filtering, and 12 samples in our data, we expect there to be 96 rows in `mygenes_counts`. 
+
+```{r}
+# We expect there to be 8 x 12 rows in mygenes_counts
+8 * 12
+# That is correct!
+dim(mygenes_counts)
+```
+
+:::
+
+<!-- end solutions -->
+
 
 <p>
 
@@ -1048,12 +1125,9 @@ mygenes <- allinfo %>%
 
 </p>
 
-## Faceting
+### Faceting
 
-*Explanation*: We *facet* on the `gene_symbol` column using
-`facet_wrap()`. We add the tilde symbol `~` in front of the column we
-want to facet on.
-
+**Your turn 6.13:** Make boxplots faceted by gene, grouped and coloured by groups
 ```{r}
 ggplot(data = mygenes_counts, 
        mapping = aes(x = Group, y = log2(Count + 1), fill = Group)) +
@@ -1061,34 +1135,47 @@ ggplot(data = mygenes_counts,
   facet_wrap(~ gene_symbol)
 ```
 
-## Plotting individual points as scatterplot
+*Explanation*: We *facet* on the `gene_symbol` column using
+`facet_wrap()`. We add the tilde symbol `~` in front of the column we
+want to facet on.
 
-However, the boxplots are not very informative as we only have two
+## Scatterplots
+
+In the example over, boxplots are not suitable because we only have two
 values per group. Let's plot the individual points instead using the
-`geom_point()` to make a scatterplot.
+`geom_point()` to make a scatter plot.
 
+**Your turn 6.14:** Make scatter plots faceted by gene and grouped by groups
 ```{r}
 ggplot(data = mygenes_counts, mapping = aes(x = Group, y = log2(Count + 1))) +
   geom_point() +
   facet_wrap(~ gene_symbol)
 ```
 
-## Jitter plot
+### Jitter plot
 
-The points are overlapping so we will make a jitter plot using
-`geom_jitter()` which adds a small amount of random variation to the
-location of each point so they do not overlap. If is also quite common
+In the previous plots, the points are overlapping which makes it hard to see them. We can make a jitter plot using `geom_jitter()` which adds a small amount of random variation to the location of each point so they do not overlap. If is also quite common
 to combine jitter plots with other types of plot, for example, [jitter
-with
-boxplot](https://simplystatistics.org/2019/02/21/dynamite-plots-must-die/).
+with boxplot](https://simplystatistics.org/2019/02/21/dynamite-plots-must-die/).
 
+**Your turn 6.15:** Make jitter plots faceted by gene and grouped by groups
 ```{r}
 ggplot(data = mygenes_counts, mapping = aes(x = Group, y = log2(Count + 1))) +
   geom_jitter() +
   facet_wrap(~ gene_symbol)
 ```
 
-We can colour the groups similar to before using `colour =`.
+**Your turn 6.16:** Modify the code above to colour the jitter plots by group
+
+<button onclick="myFunction('q99')">
+
+Show solutions
+
+</button>
+
+::: {#q99 style="display:none"}
+#### Answers
+
 
 ```{r}
 ggplot(data = mygenes_counts, 
@@ -1096,6 +1183,10 @@ ggplot(data = mygenes_counts,
   geom_jitter() +
   facet_wrap(~ gene_symbol)
 ```
+
+Note that for jitter plots you will want to use the `colour = ` slot rather than the `fill = ` slot. 
+
+:::
 
 # 7. Saving plots
 
@@ -1115,41 +1206,8 @@ ggplot(data = mygenes_counts,
 dev.off()
 ```
 
-# 8. R Markdown for reproducible reports
 
-R markdown is a great tool embedded in RStudio that will produce
-reproducible and very neat reports.
-
-R Markdown is a specific type of file format (**.Rmd**) designed to
-produce documents that include both code and text. We use it *in place*
-of the R script, as you will see in the exercises below.
-
-**Your turn 8.1:** Download the Rmarkdown template
-[here](https://melbintgen.github.io/intro-to-r/Rmd_template.zip). Copy
-the content of this folder **into** your Working directory.
-
-<p>
-
-::: info
-**ⓘ Folder organisation with R Markdown**\
-The working directory should look like this:
-![](images/folders_organise.png)
-
--   a folder where we store the data
--   a folder where the figures from the report will be saved
--   the report in .Rmd (this is what we will work with)
--   the rendered report in .pdf
-:::
-
-</p>
-
-**Your turn 8.2:** Together, let's go through the different steps of
-compiling the .Rmd file to produce a .pdf report.
-
-A good place to start with RMarkdown is with this
-[cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf).
-
-# 9. Main exercises
+# 8. Main exercises
 
 Choose one of the two following exercise, or use your own data to practice how to input them into R and make a few plots (exercise 1).
 
