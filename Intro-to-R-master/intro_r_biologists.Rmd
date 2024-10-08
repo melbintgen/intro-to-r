@@ -121,6 +121,7 @@ re-use the code and remember what we have done in the past.
 
 </p>
 
+
 ## Commenting
 
 Comments are notes to ourself or others about the commands in the
@@ -132,13 +133,12 @@ start with a `#` which tells R not to run them as commands.
 2 + 2
 ```
 
-Keeping an accurate record of how you' have manipulated your data is
+Keeping an accurate record of how you have manipulated your data is
 important for [reproducible
 research](https://ropensci.github.io/reproducibility-guide/sections/introduction/).
 Writing detailed comments and documenting your work are useful reminders
 to your future self (and anyone else reading your scripts) on what your
-code does.
-
+code does. 
 
 ## Working directory
 
@@ -149,52 +149,156 @@ the 'working directory'.
 files.* You can find out what the working directory is by using the
 command `getwd()`. This shows you the path to your working directory in
 the console. It will be in this format: `/path/to/working/directory`
-(Mac) or `C:\path\to\working\directory` (Windows). We recommend your
+(Mac) or `C:\path\to\working\directory` (Windows). We recommend keeping your
 data and R scripts in the same directory.
 
-To define the working directory, in RStudio click in the menu on
+To define the working directory, click in the menu on
 `Session > Set Working Directory > Choose directory` and choose your
 folder.
 
 **Your turn 1.3:** Create a folder for this course somewhere on your
 computer. Name the folder for example, `Intro_R_course`. Then, to set
 this folder as your working directory. Set your working directory as
-indicated above, then click 'Open'. The files tab will now show the
-contents of your new folder.
+indicated above. 
+
+You will see that once you have set your working directory, the files inside 
+your new folder will appear in the 'Files' window on RStudio.  
 
 **Your turn 1.4:** Save the script you created in the previous section
 as `intro.R` in this directory. You can do this by clicking on
 `File > Save` and the default location should be the current working
 directory (e.g. `Intro_R_course`).
 
-## R Packages or libraries
+You might have noticed that when you set your working directory in the previous
+step, a line appeared in your console saying something like 
+`setwd("~/Desktop/Intro_R_course")`. As well as the point-and-click method
+described above, you can also set your working directory using this command in 
+the console or in a script. Setting this command at the top of your script is a
+good way to make sure your script always runs from the right location on your 
+computer. 
 
-A package is a collection of functions along with documentation, code,
-tests and example data created by R developers who wish to share their
-methods and code to others. Often these packages are not installed by
-default on your computer.
+**Your turn 1.5:** Add a line at the top of your newly created script `intro.R`
+so that the working directory is set to your newly made folder `Intro_R_course`. 
 
-We use the following command line to install a package:
+## Functions
 
+In mathematics, a function defines a relation between inputs and output.
+In R (and coding languages) it is the same. A function (also called a command)
+takes several inputs called *arguments* inside parentheses, and output some results.
+We have actually already used a function in this workshop - `setwd`. This 
+function takes an input (the path to where you want to working directory to
+be set) and performs an action (sets the working directory). Let's take a look
+at some more functions below. 
+
+**Your turn 1.6:** Compare these two outputs. In the second line we use
+the function `sum`.
+
+```{r, eval = FALSE}
+2+2
+sum(2,2)
+```
+
+**Your turn 1.7:** Try using the below function with different inputs, what 
+does it do?
+
+```{r, eval = FALSE}
+sqrt(9)
+sqrt(81)
+```
+
+## Objects
+
+It is useful to store data or result so that we can use them later on
+for other parts of the analysis. To do this, we turn the data into an object (also
+called a variable). We can use either the operator `=` or `<-` to do this. In both 
+cases the object where we store the result is on the left-hand-side, and the result 
+from the operation is on the right-hand-side. 
+
+For example, the below code assigns the number `5` to the object `X` using the `=`
+operator. You can print out what the `X` object is by just typing it into the console.
+
+**Your turn 1.8:** Make an object called `X` and print it. 
+
+```{r, eval = FALSE}
+X = 5
+X
+```
+
+As described above, you can assign objects using eith the `=` or `<-` operator. 
+
+**Your turn 1.9:** Compare the two outputs.
+
+```{r, eval = FALSE}
+result1 = 2+2
+result1
+
+result2 <- 2+3
+result2
+```
+
+Once you have assigned objects, you can perform manipulations on them using functions. 
+
+**Your turn 1.10:** Compare the two outputs.
+
+```{r, eval = FALSE}
+sum(1,2)
+
+X <- 1
+Y <- 2
+sum(X,Y)
+```
+
+
+<p>
+
+::: info
+**ⓘ Nomenclature of objects**\
+
+We recommend you use explicit naming conventions of your objects, for
+example `data.raw1` and `data.normalised` rather than `data1` and
+`data2` so that you can remember various steps in your analysis.
+:::
+
+</p>
+
+# 2. R Packages
+
+We have seen that functions are really useful tools which can be used to manipulate data. 
+Although some basic functions, like `sum` and `setwd` are avaliable by default when you 
+install R, some more exciting functions are not. There are thousands of R functions avaliable 
+for you to use, and functions are organised into groups called packages or libraries. An R 
+package contains a collection of functions (usually that perform related tasks), as well as 
+documentation to explain how to use the functions. Packages are made by R developers who wish
+to share their methods with others. 
+
+Once we have identified a package we want to use, we can install and load it so we can use it. 
+Here we will use the `tidyverse` package which includes lots of useful functions for data 
+managing, we will use the package later in this session. 
+
+**Your turn 2.1:** Install the `tidyverse` package. 
 ```{r, eval=FALSE}
 install.packages("tidyverse")
 ```
 
 We then load the package in our working directory:
 
+**Your turn 2.2:** Load the `tidyverse` package so we can use it. 
 ```{r, eval=FALSE}
 library(tidyverse)
 ```
 
-# 2. Packages in the CRAN or Bioconductor
 
-Packages hosted on the [CRAN](https://cran.r-project.org/) (stands for
-Comprehensive R Archive Network) are often generic package for all sorts
+## Packages in the CRAN or Bioconductor
+
+Packages are hosted in different locations. Packages hosted on [CRAN](https://cran.r-project.org/) 
+(stands for Comprehensive R Archive Network) are often generic package for all sorts
 of data and analysis. [Bioconductor](https://bioconductor.org/) is an
 ecosystem that hosts packages specifically dedicated to biological data.
-The installation of packages is a bit different, e.g to install the
-`mixOmics` package we type:
 
+The installation of packages frp, Bioconductor is a bit different, 
+e.g to install the `mixOmics` package we type:
+
+**Your turn 2.3:** Install the `mixOmics` package from Bioconductor. 
 ```{r, eval=FALSE}
 if (!require("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
@@ -210,62 +314,13 @@ for example).
 One advantage of Bioconductor packages is that they are well documented,
 updated and maintained every six months.
 
-Here is how the example vignette looks like:
-
-```{r, eval=FALSE}
-library(mixOmics)
-browseVignettes("mixOmics")
-```
-
-## R functions
-
-In mathematics, a function defines a relation between inputs and output.
-In R (and coding languages) it is the same. A function takes several
-inputs called *arguments* inside parentheses, and output some results.
-
-**Your turn 2.1:** Compare these two outputs. In the second line we use
-the function `sum`.
-
-```{r, eval = FALSE}
-2+2
-sum(2,2)
-```
-
-## Operation assignment
-
-It is useful to store data or result so that we can use them later on
-for other parts of the analysis. We can use either the operator `=` or
-`<-`. In both cases the object where we store the result is on the
-left-hand-side, and the result from the operation is on the
-right-hand-side.
-
-**Your turn 2.2:** Compare the two outputs.
-
-```{r, eval = FALSE}
-result1 = 2+2
-result1
-
-result2 <- 2+3
-result2
-```
-
-<p>
-
-::: info
-**ⓘ Nomenclature of objects**\
-
-We recommend you use explicit naming conventions of your objects, for
-example `data.raw1` and `data.normalised` rather than `data1` and
-`data2` so that you can remember various steps in your analysis.
-:::
-
-</p>
-
 ## I need help!
 
-To see what any function in R does, type a `?` before the name and help
+As described above, every R package includes documentation to explain how to use functions. 
+For example, to find out what a function in R does, type a `?` before the name and help
 information will appear in the Help panel on the right in RStudio.
 
+**Your turn 2.4:** Find out what the `sum` command does. 
 ```{r, eval=FALSE}
 ?sum
 ```
@@ -274,12 +329,21 @@ What is really important is to scroll down the examples to understand
 how the function can be used in practice. You can use this command line
 to run the examples:
 
+**Your turn 2.5:** Run some examples of the `sum` command.
 ```{r, eval=FALSE}
 example(sum)
 ```
 
-Google and [Stack Overflow](https://stackoverflow.com/) are also useful
-resources for getting help.
+Packages also come with more comprehensive documentation called vignettes. These 
+are really helpful to get you started with the package and identify which functions
+you might want to use. 
+
+**Your turn 2.6:** Have a look at the `tidyverse` package vignette. 
+```{r, eval=FALSE}
+library(mixOmics)
+browseVignettes("tidyverse")
+```
+
 
 ## Common R errors
 
@@ -300,6 +364,18 @@ reasons for errors are:
 
 To see examples of some R error messages with explanations see
 [here](https://github.com/noamross/zero-dependency-problems/issues/7)
+
+
+<p>
+
+::: info
+**ⓘ More information for when you get stuck**\
+
+As well as using package vignettes and documentation, Google and [Stack Overflow](https://stackoverflow.com/) 
+are also useful resources for getting help.
+:::
+
+</p>
 
 # 3. Let's get started with data!
 
@@ -1001,6 +1077,40 @@ ggplot(data = mygenes_counts,
 dev.off()
 ```
 
+# 8. R Markdown for reproducible reports
+
+R markdown is a great tool embedded in RStudio that will produce
+reproducible and very neat reports.
+
+R Markdown is a specific type of file format (**.Rmd**) designed to
+produce documents that include both code and text. We use it *in place*
+of the R script, as you will see in the exercises below.
+
+**Your turn 8.1:** Download the Rmarkdown template
+[here](https://melbintgen.github.io/intro-to-r/Rmd_template.zip). Copy
+the content of this folder **into** your Working directory.
+
+<p>
+
+::: info
+**ⓘ Folder organisation with R Markdown**\
+The working directory should look like this:
+![](images/folders_organise.png)
+
+-   a folder where we store the data
+-   a folder where the figures from the report will be saved
+-   the report in .Rmd (this is what we will work with)
+-   the rendered report in .pdf
+:::
+
+</p>
+
+**Your turn 8.2:** Together, let's go through the different steps of
+compiling the .Rmd file to produce a .pdf report.
+
+A good place to start with RMarkdown is with this
+[cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf).
+
 # 9. Main exercises
 
 Choose one of the two following exercise, or use your own data to practice how to input them into R and make a few plots (exercise 1).
@@ -1172,6 +1282,7 @@ sessionInfo()
 -   The aesthetics of a ggplot can be modified, such as colouring by
     different columns in the dataset, adding labels or changing the
     background.
+-   R markdown is a useful tool for reproducible analyses and reporting.
 -   Don't forget to practice on subsetting, checking the dimension of the data, extracting and amending the names of the rows and columns of your data.
 
 # Further Reading
