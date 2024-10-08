@@ -139,10 +139,6 @@ Writing detailed comments and documenting your work are useful reminders
 to your future self (and anyone else reading your scripts) on what your
 code does.
 
-In Section 8 we describe how to use
-[Rmarkdown](https://rmarkdown.rstudio.com/) to create reproducible and
-beautiful analysis reports. You will use our R markdown template in the
-exercise.
 
 ## Working directory
 
@@ -1005,40 +1001,6 @@ ggplot(data = mygenes_counts,
 dev.off()
 ```
 
-# 8. R Markdown for reproducible reports
-
-R markdown is a great tool embedded in RStudio that will produce
-reproducible and very neat reports.
-
-R Markdown is a specific type of file format (**.Rmd**) designed to
-produce documents that include both code and text. We use it *in place*
-of the R script, as you will see in the exercises below.
-
-**Your turn 8.1:** Download the Rmarkdown template
-[here](https://melbintgen.github.io/intro-to-r/Rmd_template.zip). Copy
-the content of this folder **into** your Working directory.
-
-<p>
-
-::: info
-**ⓘ Folder organisation with R Markdown**\
-The working directory should look like this:
-![](images/folders_organise.png)
-
--   a folder where we store the data
--   a folder where the figures from the report will be saved
--   the report in .Rmd (this is what we will work with)
--   the rendered report in .pdf
-:::
-
-</p>
-
-**Your turn 8.2:** Together, let's go through the different steps of
-compiling the .Rmd file to produce a .pdf report.
-
-A good place to start with RMarkdown is with this
-[cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf).
-
 # 9. Main exercises
 
 Choose one of the two following exercise, or use your own data to practice how to input them into R and make a few plots (exercise 1).
@@ -1210,7 +1172,6 @@ sessionInfo()
 -   The aesthetics of a ggplot can be modified, such as colouring by
     different columns in the dataset, adding labels or changing the
     background.
--   R markdown is a useful tool for reproducible analyses and reporting.
 -   Don't forget to practice on subsetting, checking the dimension of the data, extracting and amending the names of the rows and columns of your data.
 
 # Further Reading
