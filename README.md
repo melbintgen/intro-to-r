@@ -1,5 +1,5 @@
 # Introduction to R
-**Authors: Maria Doyle, Jessica Chung, Vicky Perreau, Kim-Anh L&#234; Cao, Saritha Kodikara**
+**Authors: Maria Doyle, Jessica Chung, Vicky Perreau, Kim-Anh L&#234; Cao, Saritha Kodikara, Eva Hamrud**
 
 **Tutors: Eva Hamrud, Saritha Kodikara**
 
