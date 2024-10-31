@@ -20,7 +20,7 @@ Download the most recent version of R and RStudio using the links below:
 
 ### Material
 
-[Click here](https://melbintgen.github.io/intro-to-r/Intro-to-R-master/intro_r_biologists.html) to access the HTML workshop document.
+[Click here](https://melbintgen.github.io/intro-to-r/intro_r_biologists.html) to access the HTML workshop document.
 
 ### Data
 All data used for the workshop are in [data.zip](https://melbintgen.github.io/intro-to-r/data.zip).
