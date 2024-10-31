@@ -1392,13 +1392,15 @@ sessionInfo()
     background.
 -   Don't forget to practice on subsetting, checking the dimension of the data, extracting and amending the names of the rows and columns of your data.
 
-# Further Reading
+# Further Reading and Helpful Resources
 
 [A short intro to R and
 tidyverse](https://pmacdasci.github.io/r-intro-tidyverse/)\
 [Top 50 Ggplot
 Visualisations](http://r-statistics.co/Top50-Ggplot2-Visualizations-MasterList-R-Code.html)\
 [R for Data Science](https://r4ds.hadley.nz/)
+[Datacamp](https://www.datacamp.com/courses/free-introduction-to-r)
+[R ladies Sydney](https://rladiessydney.org/courses/ryouwithme/01-basicbasics-1/)
 
 \newpage
 
