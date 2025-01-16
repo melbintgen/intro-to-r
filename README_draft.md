@@ -16,15 +16,18 @@ This repository includes material for a hands-on workshop 'Introduction to R for
 
 Before attending the workshop please make sure you follow the below instructions to set up your environment:
 
-1) Download the most recent version of R and RStudio using the links below:
-    1.1) [R](https://cran.r-project.org/)
-    1.2) [RStudio](https://posit.co/download/rstudio-desktop/#download)
+1. Download the most recent version of R and RStudio using the links below:
 
-2) Install the R package called `tidyverse`. 
-    2.1) Open Rstudio
-    2.2) Type ```install.packages("tidyverse")``` into your console (bottom left window) and press enter
-    2.3) Lots of text will appear in your console as the package is installed, wait until RStudio stops printing things (this may take a few minutes)
-    2.4) Check it has installed correctly by typing ```library(tidyverse)``` into the console. Press enter and see if you get any error messages
+    1.1. [R](https://cran.r-project.org/)  
+    1.2. [RStudio](https://posit.co/download/rstudio-desktop/#download)
+
+2. Install the R package called `tidyverse`:
+
+    2.1. Open RStudio  
+    2.2. Type `install.packages("tidyverse")` into your console (bottom left window) and press enter  
+    2.3. Lots of text will appear in your console as the package is installed. Wait until RStudio stops printing things (this may take a few minutes).  
+    2.4. Check it has installed correctly by typing `library(tidyverse)` into the console. Press enter and see if you get any error messages.
+
 
 If you have any problems with the above steps, please get in contact with us, it is important you have your computer set up before attending the workshop so we can start the teaching material from the beginning. 
 
