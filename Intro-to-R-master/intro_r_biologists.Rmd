@@ -85,8 +85,9 @@ cooking](https://twitter.com/RLadiesNCL/status/1138812826917724160).
 
 ## R script vs console
 
-There are two ways to work in RStudio in the console or in a script. We
-can type a command in the console and press `Enter` to run it.
+There are two ways to work in RStudio in the console or in a script. 
+
+Let's start by running a command in the console. 
 
 **Your turn 1.1:** Run the command below in the console.
 
@@ -94,29 +95,37 @@ can type a command in the console and press `Enter` to run it.
 1 + 1
 ```
 
-Or we can use an R script. To run a command line, we place the cursor on
-the line you want to run, and then either:
+Once you've typed in the command into your console, just press enter. 
+The output should be printed into the console. 
 
--   Click on the `run` button on top of the panel
--   Use `Ctrl` + `Enter` (Windows/Linux) or `Cmd` + `Enter` (MacOS).
-
-We can also highlight multiple lines at once and run them at once.
+Alternatively, we can use an R script. An R script allows us to have a record (recipe) of what we have done, whilst 
+commands we type into the console are not saved. Keeping a record speeds up our analysis because we can re-use code, 
+its also helpful to remember what we have done before! 
 
 **Your turn 1.2:** Create a script from the top menu in RStudio:
-`File > New File > R Script`, then type the command below in the script
-and run it with one or the two options.
+`File > New File > R Script`, then type the command below in your new script. 
 
 ```{r, eval = FALSE}
 2 + 2
 ```
 
+
+To run a command in a script, we place the cursor on the line you want to run, and then either:
+
+-   Click on the `run` button on top of the panel
+-   Use `Ctrl` + `Enter` (Windows/Linux) or `Cmd` + `Enter` (MacOS).
+
+You can also highlight multiple lines at once and run them at once - have a go!
+
+
+
 <p>
 
 ::: info
 **ⓘ Using a script is recommended practice**\
-If we work in the console, we do not have a good record (recipe) of what
-we have done. It is good practice to use an R script to be able to
-re-use the code and remember what we have done in the past.
+In general we use the console to perform quick tests or run single lines of code, whilst
+scripts are used to run more complex analysis. We will write in a script for the rest of our workshop
+as this is the best practice for reproducible research.
 :::
 
 </p>
@@ -140,57 +149,92 @@ Writing detailed comments and documenting your work are useful reminders
 to your future self (and anyone else reading your scripts) on what your
 code does. 
 
+Commenting code is good practice, why not try commenting on the code you write in this session 
+to get into the habit, it will also mae your R script more informative when you come back to it in the future. 
+
 ## Working directory
 
 Opening an RStudio session launches it from a specific location. This is
 the 'working directory'.
 
-*R looks in the working directory by default to read in data and save
-files.* You can find out what the working directory is by using the
-command `getwd()`. This shows you the path to your working directory in
+::: info
+**ⓘ The working directory is where R interacts with files on your computer**\
+When you use R you will most likely be reading files (e.g. data files) and writing files (e.g. analysis results or plots you generate).
+The working directory is where R looks by default to read and write data. Knowing where the working directory is set is therefore very important!
+:::
+
+You can find out where the working directory is set to by using two different approaches:
+- the command `getwd()`. This will print out the path to your working directory in
 the console. It will be in this format: `/path/to/working/directory`
-(Mac) or `C:\path\to\working\directory` (Windows). We recommend keeping your
-data and R scripts in the same directory.
+(Mac) or `C:\path\to\working\directory` (Windows). 
+- in the menu at the top of the bottom right panel, click the `cog icon/More > Go To Working Directory`. 
+This will show you the location and files in your working directory in the files window. 
 
-To define the working directory, click in the menu on
-`Session > Set Working Directory > Choose directory` and choose your
-folder.
+**Your turn 1.3:** Use one of the two methods to see where your default working directory is set. 
 
-**Your turn 1.3:** Create a folder for this course somewhere on your
+You may notice that your working directory is your home directory, e.g. you can see lots of folders like 'Documents', 'Downloads', etc. 
+It is good practice to set your R working directory to a specific folder where you keep your data and R scripts. 
+This will make it much easier to keep track of the files that you read and write from R. 
+
+There are multiple ways to set your working directory. 
+- click in the menu at the top on `Session > Set Working Directory > Choose directory` and choose your folder
+- In the bottom right panel, navigate to the folder that you want to be your workind directory. Then click in the menu in the bottom right panel `cog icon/More > Set As Working Directory`
+
+**Your turn 1.4:** Create a folder for this course somewhere on your
 computer. Name the folder for example, `Intro_R_course`. Then, to set
-this folder as your working directory. Set your working directory as
-indicated above. 
+this folder as your working directory, using one of the methods described above. 
 
 You will see that once you have set your working directory, the files inside 
 your new folder will appear in the 'Files' window on RStudio.  
 
-**Your turn 1.4:** Save the script you created in the previous section
+**Your turn 1.5:** Save the script you created in the previous section
 as `intro.R` in this directory. You can do this by clicking on
 `File > Save` and the default location should be the current working
 directory (e.g. `Intro_R_course`).
 
 You might have noticed that when you set your working directory in the previous
 step, a line appeared in your console saying something like 
-`setwd("~/Desktop/Intro_R_course")`. As well as the point-and-click method
+`setwd("~/Desktop/Intro_R_course")`. As well as the point-and-click methods
 described above, you can also set your working directory using this command in 
-the console or in a script. Setting this command at the top of your script is a
-good way to make sure your script always runs from the right location on your 
-computer. 
+the console or in a script. 
 
-**Your turn 1.5:** Add a line at the top of your newly created script `intro.R`
+**Your turn 1.6:** What might be an advantage of using the command line option (`setwd`) instead of
+point-and-click to set your working directory?
+
+<button onclick="myFunction('q313')">
+
+Show solution
+
+</button>
+
+::: {#q313 style="display:none"}
+
+There is no easy way to record what you point and click on (unless you write it all down!).
+Putting a command at the top of the script means you are less likely to forget where you have your working directory, 
+and when you come back to it another day you can quickly re-run it. 
+
+Add a line at the top of your newly created script `intro.R`
 so that the working directory is set to your newly made folder `Intro_R_course`. 
+
+:::
+
+<!-- end solutions -->
+
+
 
 ## Functions
 
 In mathematics, a function defines a relation between inputs and output.
-In R (and coding languages) it is the same. A function (also called a command)
-takes several inputs called *arguments* inside parentheses, and output some results.
-We have actually already used a function in this workshop - `setwd()`. This 
-function takes an input (the path to where you want to working directory to
-be set) and performs an action (sets the working directory). Let's take a look
-at some more functions below. 
+In R (and other coding languages) it is the same. A function (also called a command)
+takes inputs called *arguments* inside parentheses, and output some results.
 
-**Your turn 1.6:** Compare these two outputs. In the second line we use
+We have actually already used two functions in this workshop - `getwd()` and `setwd()`. 
+`getwd()` does not take an input, but outputs your working directory. 
+`setwd()` takes a path as its input, and sets it as your working directory. 
+
+Let's take a look at some more functions below. 
+
+**Your turn 1.7:** Compare these two outputs. In the second line we use
 the function `sum()`.
 
 ```{r, eval = FALSE}
@@ -198,7 +242,7 @@ the function `sum()`.
 sum(2,2)
 ```
 
-**Your turn 1.7:** Try using the below function with different inputs, what 
+**Your turn 1.8:** Try using the below function with different inputs, what 
 does it do?
 
 ```{r, eval = FALSE}
@@ -217,7 +261,7 @@ from the operation is on the right-hand-side.
 For example, the below code assigns the number `5` to the object `X` using the `=`
 operator. You can print out what the `X` object is by just typing it into the console.
 
-**Your turn 1.8:** Make an object called `X` and print it. 
+**Your turn 1.9:** Make an object called `X` and print it. 
 
 ```{r, eval = FALSE}
 X = 5
@@ -226,7 +270,7 @@ X
 
 As described above, you can assign objects using eith the `=` or `<-` operator. 
 
-**Your turn 1.9:** Compare the two outputs.
+**Your turn 1.10:** Compare the two outputs.
 
 ```{r, eval = FALSE}
 result1 = 2+2
@@ -238,7 +282,7 @@ result2
 
 Once you have assigned objects, you can perform manipulations on them using functions. 
 
-**Your turn 1.10:** Compare the two outputs.
+**Your turn 1.11:** Compare the two outputs.
 
 ```{r, eval = FALSE}
 sum(1,2)
@@ -250,7 +294,7 @@ sum(X,Y)
 
 Remember, if you use the same object name multiple times, R will overwrite the previous object you had created. 
 
-**Your turn 1.11:** What is the value of X after running this code?
+**Your turn 1.12:** What is the value of X after running this code?
 ```{r, eval = FALSE}
 X <- 5
 X <- 10
@@ -273,6 +317,27 @@ X is 10, the previous value of 5 has been overwritten.
 
 <p>
 
+**Your turn 1.13:** Can you write code to calculate the sum of the square root of 9 and 16?
+
+<button onclick="myFunction('q303')">
+
+Show solutions
+
+</button>
+
+::: {#q303 style="display:none"}
+
+```{r, eval = FALSE}
+sum(sqrt(9), sqrt(16))
+```
+
+:::
+
+<!-- end solutions -->
+
+
+<p>
+
 ::: info
 **ⓘ Nomenclature of objects**\
 
@@ -282,6 +347,75 @@ example `data.raw1` and `data.normalised` rather than `data1` and
 :::
 
 </p>
+
+
+So far we have looked at objects which are numbers. However objects can also be made of characters, these are called strings. 
+To create a string you need to use speech marks. Note that you can either use `print()` to print out your object, or just run the object name directly. 
+
+```{r}
+my_string <- "Hello!"
+print(my_string)
+```
+
+There are a whole host of different objects you can make in R, too many to cover in this session!
+Later on when we do some data wrangling we will work with objects which are dataframes (basically tables) and vectors (basically lists). 
+Let's make a simple vector now to get familiar. To make a vector you need to use `c()`. 
+
+```{r}
+my_vector <- c(1, 2, 3)
+my_vector
+
+my_new_vector <- c("Hello", "World")
+my_new_vector
+```
+
+**Your turn 1.14:** What does `1:5` do?
+
+<button onclick="myFunction('q323')">
+
+Show solutions
+
+</button>
+
+::: {#q323 style="display:none"}
+
+It creates a vector with a sequence of numbers from 1 to 5. 
+
+:::
+
+
+Once you have a vector, you can subset it. We will cover this further when we do some data wrangling but lets try a simple example here. 
+
+```{r}
+my_vector <- c("A", "B", "C")
+# extract the first element from the vector
+my_vector[1]
+# extract the last element from the vector
+my_vector[3]
+```
+
+**Your turn 1.15:** Create a vector from 1 to 10 and extract number 9. 
+
+
+<button onclick="myFunction('q333')">
+
+Show solutions
+
+</button>
+
+::: {#q333 style="display:none"}
+
+```{r, eval = FALSE}
+vector <- 1:10
+vector[9]
+```
+
+:::
+
+
+<p>
+
+
 
 # 2. R Packages
 
