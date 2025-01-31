@@ -38,7 +38,9 @@ Alternatively, you can access Rstudio on your web browser so you don't need to i
 
 ### Material
 
-[Click here](https://melbintgen.github.io/intro-to-r/intro_r_biologists.html) to access the HTML workshop document.
+[Click here](https://melbintgen.github.io/intro-to-r/intro_r_biologists.html) to access the HTML workshop document - we will be using this throughout the session. 
+
+[Click here](https://unimelb.padlet.org/sarithakodikara/into_to_r) to access the Padlet page for extra questions to challenge yourself! These are bonus questions you can answer using the course material or by searching the internet. 
 
 ### Data
 All data used for the workshop are in [data.zip](https://melbintgen.github.io/intro-to-r/data.zip).
