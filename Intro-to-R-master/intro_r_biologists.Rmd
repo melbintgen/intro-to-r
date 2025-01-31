@@ -126,10 +126,8 @@ You can also highlight multiple lines at once and run them at once - have a go!
 <p>
 
 ::: info
-**ⓘ Using a script is recommended practice**\
-In general we use the console to perform quick tests or run single lines of code, whilst
-scripts are used to run more complex analysis. We will write in a script for the rest of our workshop
-as this is the best practice for reproducible research.
+**✔️ Recommended Practice: Use Scripts**\
+The console is great for quick tests or running single lines of code. However, for more complex analyses, using scripts is best practice. Scripts help keep your work organized and reproducible. We'll use scripts for the rest of this workshop.
 :::
 
 </p>
@@ -167,9 +165,8 @@ the 'working directory'.
 <br>
 
 ::: info
-**ⓘ The working directory is where R interacts with files on your computer**\
-When you use R you will most likely be reading files (e.g. data files) and writing files (e.g. analysis results or plots you generate).
-The working directory is where R looks by default to read and write data. Knowing where the working directory is set is therefore very important!
+**ⓘ Understanding the Working Directory**\
+The working directory is the folder where R reads and saves files on your computer. When working in R, you'll often read data files and write outputs like analysis results or plots. Knowing where your working directory is set helps ensure R finds your files and saves outputs in the right place.
 :::
 
 <br>
@@ -204,7 +201,7 @@ directory (e.g. `Intro_R_course`).
 <br>
 
 ::: info
-**ⓘ Multiple Ways to Achieve the Same Goal in R**\
+**🔧 Multiple Ways to Achieve the Same Goal in R**\
 You might have noticed by now that in R, there are often several ways to accomplish the same task. You might find one method more intuitive or easier to use than others — and that’s okay! Experiment, explore, and choose the approach that works best for you.
 :::
 
@@ -360,11 +357,9 @@ sum(sqrt(9), sqrt(16))
 
 
 ::: info
-**ⓘ Nomenclature of objects**\
+**✔️ Recommended Practice: Name your objects with care**\
 
-We recommend you use explicit naming conventions of your objects, for
-example `data.raw` and `data.normalised` rather than `data1` and
-`data2` so that you can remember various steps in your analysis.
+Use clear and descriptive names for your objects, such as `data_raw` and `data_normalised`, instead of vague names like `data1` and `data2`. This makes it easier to track different steps in your analysis.
 :::
 
 </p>
@@ -553,6 +548,7 @@ reasons for errors are:
 To see examples of some R error messages with explanations see
 [here](https://github.com/noamross/zero-dependency-problems/issues/7)
 
+<br>
 
 <p>
 
@@ -584,15 +580,19 @@ each sample normalized for differences in sequencing depth and
 composition bias. Generally, the higher the number of counts the more
 the gene is expressed.
 
+<br>
+
 ## RNA-seq dataset form Fu et al.
 
 Here we will create some plots using RNA-seq data from the paper by [Fu
 et al. 2015](https://www.ncbi.nlm.nih.gov/pubmed/25730472), GEO code
-GSE60450. This study examined expression in basal and luminal cells from
-mice at different stages (virgin, pregnant and lactating). There are 2
-samples per group and 6 groups, 12 samples in total.
+GSE60450. Mice, like many mammals, have mammary glands which produce milk to nourish their young. The authors of this study were interested in examining how the mammary epithelium (which lines the mammary gland) expands and develops during pregnancy and lactation. 
+
+This study examined expression in basal and luminal cells from
+mice at different stages (virgin, pregnant and lactating). Basal cells are mammary stem cells and luminal cells secrete milk. There are 2 samples per group and 6 groups, so 12 samples in total.
 
 ![](images/mouse_exp.png){width="396"}
+<br>
 
 ## Tidyverse package
 
@@ -601,6 +601,8 @@ that includes the extremely widely used **`ggplot2`** package.
 
 The [tidyverse](https://www.tidyverse.org/) makes data science faster,
 easier and more fun.
+
+<br>
 
 ## Load the package
 
@@ -616,6 +618,8 @@ Section 2).
 ```{r, message=FALSE, warning=FALSE}
 library(tidyverse)
 ```
+
+<br>
 
 ## Load the data
 
@@ -665,6 +669,16 @@ It is very common when looking at biological data that you have two types of dat
 expression values of different genes in each sample). The other is **metadata**
 i.e. information about our samples (in this case, our `sampleinfo` object includes information about whether samples are from basal or luminal cells and
 whether the cells were from mice which are virgin/pregnant/lactating, etc.)
+
+<br>
+
+**What data have we imported into R?**
+To summarise, we have imported two dataframes (i.e. tables) into R:
+
+-   `counts` object is our gene expression data
+-   `sampleinfo` object is our sample metadata
+
+<br>
 
 # 4. Looking at the data
 
@@ -722,26 +736,56 @@ The first 6 samples are luminal cells.
 
 <!-- end solutions -->
 
+<br>
 
 ## Dimension of the data
 
-It is very useful to check that what you have read in R corresponds to
-the number of lines and columns that you expect to see in your data. 
 You can print the number of rows and columns using the function `dim()`. 
 
-**Your turn 4.6:** Check how many rows and columns are in `counts` and in `sampleinfo`. 
-
-```{r, eval = FALSE}
-dim(counts)
+For example, 
+```{r}
 dim(sampleinfo)
 ```
 
-This show us there are 23735 rows and 14 columns in the count data (i.e. 23735 genes and 12 samples, note the first two columns are gene IDs and gene names).
+`sampleinfo` has 12 rows, correponding to our 12 samples, and 4 columns, corresponding to different bits of data about the samples. 
 
-In the metadata there are 12 rows and 4 column (i.e. 12 samples and 4 bits of information per sample). 
+<p>
 
-In the Environment Tab in the top right panel in RStudio we can also see
-the number of rows and columns in the objects we have in our session.
+::: info
+**✔️ Tip: Always Verify Your Data Size**\
+
+Double-check that your data has the expected number of rows and columns. It's easy to read the wrong file or encounter corrupted downloads. Catching these issues early will save you a lot of trouble later!
+
+:::
+
+</p>
+
+**Your turn 4.6:** Check how many rows and columns are in `counts`. Do these numbers match what we expected?
+
+<button onclick="myFunction('q400')">
+
+Show solutions
+
+</button>
+
+::: {#q400 style="display:none"}
+
+```{r}
+dim(counts)
+```
+
+We know that there are 12 samples in our data (see the diagram above), and we don't know how many genes were measured. 
+
+**Rows:** 23735. This means there are 23735 genes, which could be correct (we didn't know how many genes were measured). 
+
+**Columns:** 14. We would expect to have 12 columns corresponding to our 12 samples, but instead we have 14. Why is this? Have a look back at when we visualised the `counts` data, there are two extra columns in the data corresponding to gene IDs and gene names.
+
+:::
+
+<!-- end solutions -->
+
+<br>
+
 
 ## Column and row names of the data
 
@@ -753,6 +797,8 @@ colnames(sampleinfo)
 rownames(sampleinfo)
 ```
 
+<br>
+
 ## The `$` symbol
 
 We can access individual columns by name using the `$` symbol. 
@@ -762,11 +808,13 @@ We can access individual columns by name using the `$` symbol.
 sampleinfo$immunophenotype
 ```
 
+<br>
+
 ## Subsetting
 
-Subsetting is very important in R to extract parts of the data you want
+Subsetting is very useful tool in R which allows you to extract parts of the data you want
 to analyse. In R, a data set has the form of a matrix with rows and
-columns. You can access these rows or columns by using square brackets.
+columns. You can access these rows or columns by using square brackets `[ ]`.
 
 For example, we can extract the first row '1' of the data, using the number
 on the *left-hand-side* of the comma.
@@ -783,6 +831,19 @@ the *right-hand-side* of the comma.
 ```{r, eval = FALSE}
 sampleinfo[,2]
 ```
+
+<br>
+<p>
+
+::: info
+**⚠️ Common R Error: Missing Comma in Subsetting**
+
+When subsetting data frames or matrices (which have *two* dimensions, i.e. rows and columns), always use a comma to separate rows and columns, like `sampleinfo[1, ]`. Forgetting the comma, as in `sampleinfo[1]`, will cause an error. Try it yourself and see what happens!
+
+:::
+
+</p>
+<br>
 
 You can use a combination of number of row and column to extract one
 element in the matrix. 
@@ -816,6 +877,7 @@ sampleinfo[1:3,]
 
 <!-- end solutions -->
 
+<br>
 <p>
 
 ::: info
@@ -827,10 +889,11 @@ again in this tutorial.
 :::
 
 </p>
+<br>
 
 In the previous section, when we loaded in the data from the csv file,
 we noticed that the first column had a missing column name and by
-default, read_csv function assigned a name of "\...1" to it. We can
+default, the `read_csv` function assigned a name of `"\...1"` to it. We can
 change this column to something more descriptive by combining what what
 we have learnt.
 
@@ -843,7 +906,7 @@ sampleinfo
 ```
 
 **Your turn 4.14:** Do the same to rename the first column name from
-"\...1" to "gene_id" in `counts`.
+"\...1" to "gene_id" in the `counts` object.
 
 <button onclick="myFunction(&#39;q1&#39;)">
 
@@ -860,6 +923,8 @@ head(counts)
 :::
 
 <!-- end solutions -->
+
+<br>
 
 ## Other useful commands: `str` and `summary`
 
@@ -883,18 +948,7 @@ us the length (how many rows).
 summary(counts)
 ```
 
-<p>
-
-::: info
-**ⓘ Multiple methods**\
-There are multiple ways to do things in R. For example we used the
-function `colnames` in the previous exercise, but we could have used the
-`rename()` function. When programming, you will often find many ways to
-do the same thing. Often there is one obvious method depending on the
-context.
-:::
-
-</p>
+<br>
 
 # 5. Formatting data
 
@@ -972,6 +1026,8 @@ All three `seqdata` objects are the same, as we did the same conversion from wid
 
 <!-- end solutions -->
 
+<br>
+
 ## Joining two tables
 
 Now that we've got just one column containing sample ids in both our
@@ -1012,6 +1068,8 @@ The `allinfo` object has 7 columns which tell you about the gene id and symbol, 
 
 <!-- end solutions -->
 
+<br>
+
 # 6. Plotting with **`ggplot2`**
 
 **`ggplot2`** is a plotting package that makes it simple to create
@@ -1026,17 +1084,17 @@ variable, and a row for every observation, similar to what we created
 with `pivot_longer()` above. Well-structured data will save you lots of
 time when making figures with **`ggplot2`**.
 
+<br>
 <p>
 
 ::: info
-**ⓘ Ggplot architecture**
+**📊 Understanding ggplot2 Architecture**
 
-Ggplot graphics are built step by step by adding new elements using the
-`+`. Adding layers in this fashion allows for extensive flexibility and
-customization of plots.
+ggplot2 plots are built step by step by adding layers with `+`. This approach provides great flexibility, allowing you to customize your plots extensively.
 :::
 
 </p>
+<br>
 
 To build a ggplot, we use the following basic template that can be used
 for different types of plots. Three things are required for a ggplot:
@@ -1055,6 +1113,8 @@ available take a look at the ggplot2 help or the handy [ggplot2
 cheatsheet](https://rstudio.github.io/cheatsheets/data-visualization.pdf).
 Or if you type "geom" in RStudio, RStudio will show you the different
 types of geoms you can use.
+
+<br>
 
 ## Creating a boxplot
 
@@ -1101,6 +1161,8 @@ ggplot(data = allinfo, mapping = aes(x = Sample, y = log2(Count + 1))) +
 The box plots show that the distributions of the samples are not
 identical but they are not very different.
 
+<br>
+
 ## Violin plot
 
 Boxplots are useful summaries, but hide the shape of
@@ -1128,6 +1190,8 @@ ggplot(data = allinfo, mapping = aes(x = Sample, y = log2(Count + 1))) +
 :::
 
 <!-- end solutions -->
+
+<br>
 
 ## Colouring by categories
 
@@ -1160,6 +1224,8 @@ plots, whereas `colour =` is used to colour lines and points.
 
 A really nice feature about ggplot is that we can easily colour by
 another variable by simply changing the column we give to `fill =`.
+
+<br>
 
 ## Creating subplots for each gene using faceting
 
@@ -1358,6 +1424,8 @@ Note that for jitter plots you will want to use the `colour = ` slot rather than
 
 :::
 
+<br>
+
 # 7. Saving plots
 
 We can save plots interactively by clicking Export in the Plots window
@@ -1376,6 +1444,7 @@ ggplot(data = mygenes_counts,
 dev.off()
 ```
 
+<br>
 
 # 8. Main exercises
 
@@ -1534,6 +1603,8 @@ gene.info<-full_join(gene.name, gene.description, by = join_by(gene.ID))
 
 <!-- end solutions -->
 
+<br>
+
 # 9. Session Info
 
 At the end of your report, we recommend you run the `sessionInfo()`
@@ -1545,6 +1616,8 @@ practice as it helps with reproducibility in the future.
 ```{r}
 sessionInfo()
 ```
+
+<br>
 
 # 10. Key Points
 
@@ -1562,6 +1635,8 @@ sessionInfo()
     background.
 -   Don't forget to practice on subsetting, checking the dimension of the data, extracting and amending the names of the rows and columns of your data.
 
+<br>
+
 # Further Reading and Helpful Resources
 
 - [A short intro to R and
@@ -1575,6 +1650,8 @@ Visualisations](http://r-statistics.co/Top50-Ggplot2-Visualizations-MasterList-R
 - [ggplot 2 cheatsheet](https://posit.co/wp-content/uploads/2022/10/data-visualization-1.pdf)
 
 \newpage
+
+<br>
 
 # Extra material: Customising the plot
 
