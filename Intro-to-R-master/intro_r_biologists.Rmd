@@ -1648,6 +1648,7 @@ Visualisations](http://r-statistics.co/Top50-Ggplot2-Visualizations-MasterList-R
 - [R ladies Sydney](https://rladiessydney.org/courses/ryouwithme/01-basicbasics-1/)
 - [Data wrangling cheatsheet](https://www.rstudio.com/wp-content%2Fuploads%2F2015%2F02%2Fdata-wrangling-cheatsheet.pdf%2F)
 - [ggplot 2 cheatsheet](https://posit.co/wp-content/uploads/2022/10/data-visualization-1.pdf)
+- [Intro to R markdown](https://rmarkdown.rstudio.com/lesson-1.html)
 
 \newpage
 
